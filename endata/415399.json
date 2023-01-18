@@ -1,0 +1,298 @@
+{
+    "is_disp_status": "1",
+    "position": "1",
+    "V_Position": "1",
+    "Position_Name": "\u30a2\u30ea\u30b9",
+    "MCLS": "1",
+    "V_MCLS": "1",
+    "MCLS_Name": "\u30b9\u30c6\u30fc\u30b7\u30fc",
+    "MC1": "1",
+    "MC2": "1",
+    "MC3": "0",
+    "SCLS": "1",
+    "V_SCLS": "1",
+    "SCLS_Name": "\u30b9\u30c6\u30fc\u30b7\u30fc",
+    "SC1": "1",
+    "SC2": "1",
+    "SC3": "0",
+    "ST_Bonus": "1",
+    "BN1": "on",
+    "TM1": "",
+    "TM2": "",
+    "TM3": "",
+    "NP1": "3",
+    "NP2": "2",
+    "NP3": "0",
+    "is_disp_speed": "1",
+    "Act_parts_A": "",
+    "Act_parts_B": "",
+    "Act_parts_C": "",
+    "Act_Total": "9",
+    "nou_alive": "1",
+    "medama_alive": "1",
+    "Act_partsA_alive": "1",
+    "Act_PartsA_Ef": "",
+    "Act_partsB_alive": "1",
+    "Act_PartsB_Ef": "",
+    "Act_partsC_alive": "1",
+    "Act_PartsC_Ef": "",
+    "is_disp_power": "1",
+    "is_disp_peffect": "1",
+    "bui_break": "0",
+    "kihon_parts": "0",
+    "VS_S1": "on",
+    "VS_P1": "on",
+    "VS_S2": "on",
+    "VS_P2": "on",
+    "VS_S3": "on",
+    "VS_P3": "on",
+    "VS_S4": "on",
+    "VS_P4": "on",
+    "VS_S5": "on",
+    "VS_P5": "on",
+    "VS_S6": "on",
+    "VS_P6": "on",
+    "VS_S7": "on",
+    "VS_P7": "on",
+    "Power_Lost": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+    ],
+    "Power_Used": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+    ],
+    "Pow_Type": "1",
+    "Power_Type": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+    ],
+    "Power_hantei": [
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4"
+    ],
+    "V_Power_hantei": [
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4"
+    ],
+    "Power_name": [
+        "\u72d9\u6483\u30e9\u30a4\u30d5\u30eb",
+        "\u307b\u306d",
+        "\u30b9\u30b3\u30fc\u30d7",
+        "\u6b7b\u306e\u624b",
+        "\u306e\u3046\u307f\u305d",
+        "\u306f\u3089\u308f\u305f"
+    ],
+    "Power_id": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+    ],
+    "Power_timing": [
+        "1",
+        "1",
+        "2",
+        "4",
+        "0",
+        "0"
+    ],
+    "V_Power_timing": [
+        "1",
+        "1",
+        "2",
+        "4",
+        "0",
+        "0"
+    ],
+    "Power_cost": [
+        "2",
+        "3",
+        "0",
+        "0",
+        "0",
+        "\u306a\u3057"
+    ],
+    "Power_range": [
+        "2-3",
+        "\u81ea\u8eab",
+        "\u81ea\u8eab",
+        "\u81ea\u8eab",
+        "\u81ea\u8eab",
+        "\u306a\u3057"
+    ],
+    "Power_memo": [
+        "\u5c04\u6483\u653b\u6483\uff11\u3000\u653b\u6483\u5224\u5b9a\uff0b\uff11",
+        "\u79fb\u52d5\uff11",
+        "\u652f\u63f4\uff12\u3000\u5c04\u6483\u30fb\u7832\u6483\u653b\u6483\u306e\u307f\u53ef",
+        "\u4efb\u610f\u306e\u653b\u6483\u30de\u30cb\u30e5\u30fc\u30d0\uff11\u3064\u3092\u300c\u30e9\u30d4\u30c3\u30c9\u300d\u3068\u3057\u3066\u5229\u7528\u53ef",
+        "\u6700\u5927\u884c\u52d5\u5024+\uff12",
+        "\u306a\u3057"
+    ],
+    "Power_shozoku": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "is_disp_carma": "0",
+    "carma_completed": [
+        "",
+        "",
+        ""
+    ],
+    "carma_name": [
+        "\u8a18\u61b6\u306e\u30ab\u30b1\u30e9\u3092\u7372\u5f97\u3059\u308b",
+        "",
+        ""
+    ],
+    "carma_memo": [
+        "",
+        "",
+        ""
+    ],
+    "is_disp_skill": "0",
+    "kakera_name": [
+        ""
+    ],
+    "kakera_memo": [
+        ""
+    ],
+    "is_disp_roice": "0",
+    "roice_name": [
+        "\u305f\u304b\u3089\u3082\u306e",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "sl_roice": "0",
+    "roice_pos": [
+        "\u4f9d\u5b58",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "roice_id": [
+        "3",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "roice_dmg": "3",
+    "roice_damage": [
+        "3",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3"
+    ],
+    "roice_neg": [
+        "\u5e7c\u5150\u9000\u884c",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "roice_break": [
+        "\u6700\u5927\u884c\u52d5\u5024\u6e1b\u5c11(-2)",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "roice_memo": [
+        "\u30d1\u30fc\u30c4\u3068\u3057\u3066\u6240\u6301\u3002\u7834\u58ca\u3067\u72c2\u6c17\u70b9+1",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "is_disp_SesHistory": "0",
+    "exp_his_sum": "0",
+    "adv_exp_his": [
+        "",
+        "",
+        ""
+    ],
+    "bns_exp_his": [
+        "",
+        "",
+        ""
+    ],
+    "get_exp_his": [
+        "0",
+        "0",
+        "0"
+    ],
+    "seicho_memo_his": [
+        "",
+        "",
+        ""
+    ],
+    "is_disp_personal": "0",
+    "pc_name": "",
+    "pc_tags": "",
+    "shuzoku": "",
+    "age": "",
+    "V_sex": "",
+    "SL_sex": "0",
+    "sex": "\u7149\u7344",
+    "pc_height": "",
+    "pc_weight": "",
+    "pc_carma": "",
+    "color_hair": "",
+    "color_eye": "",
+    "color_skin": "",
+    "pc_making_memo": "\u30db\u30e9\u30fc\r\n\u5207\u65ad\u7206\u767a\u00d7\uff12\r\n\u60aa\u610f\uff13\u3000\r\n\u6700\u5927\u884c\u52d5\u5024\uff18",
+    "pc_making_memo_rows": "6",
+    "message": "",
+    "game": "nechro",
+    "data_id": 415399,
+    "phrase": "666d9eaeac43dc31e3b75c312f742b45",
+    "data_title": "\u30b9\u30ca\u30a4\u30d1\u30fc",
+    "save_limitate": "password",
+    "dodontof_send_to": "https://ddntf.museru.com/DodontoF/DodontoF.swf",
+    "dodontof_url": "",
+    "dodontof_room": "",
+    "koma_name": "",
+    "dodontof_image": "",
+    "dodontof_sc_colors": "",
+    "elysion": "",
+    "nechro": "",
+    "select2": "All",
+    "": ""
+}
