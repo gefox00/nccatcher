@@ -124,5 +124,5 @@ class Nccatcher:
                 'externalUrl': str(ch_url), 'memo': sys_memo, 'commands': command,
                 'status': cocost_data, 'params': cocopa_data}
         out_data['data'] = temp
-        # クリップボード変換したデータを書き込みインスタンスしたときにオンオフ切替
+        # 変換したデータをオブジェクトで保持
         self.ch_data = str(out_data).replace('\'', '"')

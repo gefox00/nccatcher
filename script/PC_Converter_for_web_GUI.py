@@ -26,11 +26,15 @@ while True:
             target = window['tb_open'].get() + '.js'
             data = requests.get(target)
             if data.status_code == requests.codes.ok:
+
                 get = Nccatcher(data=data.json(), url=window['tb_open'].get()).ch_data
                 pyperclip.copy(get)
                 window['log'].update(get)
+            # ボタンを連打して攻撃しないように1秒待機
             sleep(1)
+    # クリップボードにコピーボタン押下処理
     if event == 'bt_copy':
+        # GUIのログボックスに表示してる内容をclipboardにコピーする
         pyperclip.copy(window['log'].get())
 
 exit()
