@@ -60,6 +60,4 @@ exit()
 # デバッグ用
 # https://charasheet.vampire-blood.net/me58c7745269933f1080637f585dfa201
 #                                       e58c7745269933f1080637f585dfa201
-# https://charasheet.vampire-blood.net/m60c76858f87cacfa082381f315146a92
-# ソドワ
-# https://charasheet.vampire-blood.net/m74509403b022161a91139dcbd9305cd0
+
