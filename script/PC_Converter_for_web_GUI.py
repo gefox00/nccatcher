@@ -36,6 +36,7 @@ while True:
             # APIを叩いてJson取得
             target = window['tb_open'].get() + '.js'
             data = requests.get(target)
+            # 処理可能なデータか中身を確認する
             title = data.json()
             # レスポンスとシートタイトルを確認
             if data.status_code == requests.codes.ok and title['game'] == 'nechro':
@@ -57,6 +58,8 @@ while True:
             # クリップボードにログボックスの中身をコピーしたことをポップアップ
             Sg.popup('クリップボードにコピーしました', title='コピーしました', no_titlebar=True)
         else:
+            # urlの入力なしにボタンを押下した場合は警告表示する
+            # 他に処理はしない
             Sg.popup_error('コピーすべきデータがありません', title='error', no_titlebar=True)
 
 # 何らかの理由でループが抜けたときにプログラムを確実に終了させる
