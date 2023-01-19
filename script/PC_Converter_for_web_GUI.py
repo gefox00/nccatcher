@@ -1,8 +1,9 @@
 import PySimpleGUI as Sg
 import requests
+import pyperclip
 from PC_Converter_for_web_class import Nccatcher
 from time import sleep
-import pyperclip
+
 
 # ウィンドウに配置するコンポーネント設定
 layout = [
@@ -15,8 +16,9 @@ layout = [
             # 変換結果表示用テキストボックスの配置
             [Sg.Output(size=(78, 20), key='log')]
          ]
+# コンテキストメニュー設定
 # ウィンドウタイトル設定
-window = Sg.Window('コンバーター', layout)
+window = Sg.Window(title='コンバーター', layout=layout)
 while True:
     # イベントハンドラ
     event, values = window.read()
@@ -28,7 +30,7 @@ while True:
 
     # 変換開始ボタン押下時の動作
     if event == 'bt_start':
-        window['log'].update(values)
+
         if len(window['tb_open'].get()) > 0 and 'charasheet.vampire-blood.net' in window['tb_open'].get():
             window['log'].update('')
             # APIを叩いてJson取得
@@ -49,10 +51,13 @@ while True:
             sleep(1)
     # クリップボードにコピーボタン押下処理
     if event == 'bt_copy':
-        # GUIのログボックスに表示してる内容をclipboardにコピーする
-        pyperclip.copy(window['log'].get())
-        # クリップボードにログボックスの中身をコピーしたことをポップアップ
-        Sg.popup('クリップボードにコピーしました', title='コピーしました', no_titlebar=True)
+        if len(window['log'].get()) > 0:
+            # GUIのログボックスに表示してる内容をclipboardにコピーする
+            pyperclip.copy(window['log'].get())
+            # クリップボードにログボックスの中身をコピーしたことをポップアップ
+            Sg.popup('クリップボードにコピーしました', title='コピーしました', no_titlebar=True)
+        else:
+            Sg.popup_error('コピーすべきデータがありません', title='error', no_titlebar=True)
 
 # 何らかの理由でループが抜けたときにプログラムを確実に終了させる
 exit()
@@ -60,4 +65,6 @@ exit()
 # デバッグ用
 # https://charasheet.vampire-blood.net/me58c7745269933f1080637f585dfa201
 #                                       e58c7745269933f1080637f585dfa201
-
+# https://charasheet.vampire-blood.net/m60c76858f87cacfa082381f315146a92
+# ソドワ
+# https://charasheet.vampire-blood.net/m74509403b022161a91139dcbd9305cd0
