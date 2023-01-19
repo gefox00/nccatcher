@@ -2133,6 +2133,14 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\_distutils_hack\\override.py',
    'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
+   'PYMODULE'),
   ('nturl2path',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\nturl2path.py',
@@ -2149,17 +2157,13 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\http\\cookiejar.py',
    'PYMODULE'),
-  ('stringprep',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
-   'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
-   'PYMODULE'),
   ('_py_abc',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('PC_Converter_for_web_class',
+   'C:\\Users\\kazuya '
+   'asai\\Dropbox\\nccatcher\\script\\PC_Converter_for_web_class.py',
    'PYMODULE'),
   ('pyperclip',
    'C:\\Users\\kazuya '
@@ -2168,10 +2172,6 @@
   ('ctypes.wintypes',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\ctypes\\wintypes.py',
-   'PYMODULE'),
-  ('PC_Converter_for_web_class',
-   'C:\\Users\\kazuya '
-   'asai\\Dropbox\\nccatcher\\script\\PC_Converter_for_web_class.py',
    'PYMODULE'),
   ('requests',
    'C:\\Users\\kazuya '
