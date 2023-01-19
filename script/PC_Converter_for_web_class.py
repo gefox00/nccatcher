@@ -120,6 +120,7 @@ class Nccatcher:
             cocopa_data.append({'label': i[0], 'value': '使用可能'})
         for i in parts_data:
             command += i + '\n'
+
         temp = {'name': data['pc_name'], 'initiative': int(data['Act_Total']),
                 'externalUrl': str(ch_url), 'memo': sys_memo, 'commands': command,
                 'status': cocost_data, 'params': cocopa_data}
