@@ -73,6 +73,8 @@ class Nccatcher:
                     # 例外のおきようなくね？
                     # 今後修正検討箇所
                     insert = ''
+                    # キャラシのマニューバをデータべースからキーワード検索
+                    # あいまいな検索方法なため似たような名前の物がヒットしてしまうため正確性はない
                     for m in much:
                         if m in name:
                             insert = much[m]
