@@ -1,5 +1,4 @@
-('C:\\Users\\kazuya '
- 'asai\\Dropbox\\nccatcher\\script\\build\\PC_Converter_for_web_GUI\\PYZ-00.pyz',
+('D:\\Desktop\\make\\script\\build\\PC_Converter_for_web_GUI\\PYZ-00.pyz',
  [('_distutils_hack',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\_distutils_hack\\__init__.py',
@@ -352,9 +351,25 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\versionpredicate.py',
    'PYMODULE'),
-  ('distutils.version',
+  ('setuptools._distutils.version',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\version.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\version.py',
+   'PYMODULE'),
+  ('setuptools._distutils.util',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\util.py',
+   'PYMODULE'),
+  ('distutils.sysconfig',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\sysconfig.py',
+   'PYMODULE'),
+  ('_osx_support',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_osx_support.py',
+   'PYMODULE'),
+  ('distutils.text_file',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\text_file.py',
    'PYMODULE'),
   ('distutils',
    'C:\\Users\\kazuya '
@@ -384,25 +399,9 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\debug.py',
    'PYMODULE'),
-  ('subprocess',
+  ('distutils.log',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\subprocess.py',
-   'PYMODULE'),
-  ('signal',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\signal.py',
-   'PYMODULE'),
-  ('distutils.sysconfig',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\sysconfig.py',
-   'PYMODULE'),
-  ('_osx_support',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_osx_support.py',
-   'PYMODULE'),
-  ('distutils.text_file',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\text_file.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\log.py',
    'PYMODULE'),
   ('sysconfig',
    'C:\\Users\\kazuya '
@@ -416,29 +415,17 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_bootsubprocess.py',
    'PYMODULE'),
-  ('distutils.log',
+  ('subprocess',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\log.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\subprocess.py',
    'PYMODULE'),
-  ('setuptools._distutils.version',
+  ('signal',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\version.py',
-   'PYMODULE'),
-  ('setuptools._distutils.util',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\util.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\signal.py',
    'PYMODULE'),
   ('setuptools._distutils.unixccompiler',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\unixccompiler.py',
-   'PYMODULE'),
-  ('distutils.ccompiler',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\ccompiler.py',
-   'PYMODULE'),
-  ('distutils.fancy_getopt',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\fancy_getopt.py',
    'PYMODULE'),
   ('shlex',
    'C:\\Users\\kazuya '
@@ -475,6 +462,14 @@
   ('distutils.msvc9compiler',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\msvc9compiler.py',
+   'PYMODULE'),
+  ('distutils.ccompiler',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\ccompiler.py',
+   'PYMODULE'),
+  ('distutils.fancy_getopt',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\fancy_getopt.py',
    'PYMODULE'),
   ('win32con',
    'C:\\Users\\kazuya '
@@ -516,6 +511,10 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\versionpredicate.py',
    'PYMODULE'),
+  ('distutils.version',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\version.py',
+   'PYMODULE'),
   ('distutils.command',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\command\\__init__.py',
@@ -548,21 +547,13 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\cygwinccompiler.py',
    'PYMODULE'),
-  ('distutils.unixccompiler',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\unixccompiler.py',
-   'PYMODULE'),
   ('setuptools._distutils.core',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\core.py',
    'PYMODULE'),
-  ('distutils.extension',
+  ('setuptools._distutils.config',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\extension.py',
-   'PYMODULE'),
-  ('distutils.config',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\config.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\config.py',
    'PYMODULE'),
   ('cgi',
    'C:\\Users\\kazuya '
@@ -576,10 +567,6 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\html\\entities.py',
    'PYMODULE'),
-  ('setuptools._distutils.config',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\config.py',
-   'PYMODULE'),
   ('setuptools._distutils.command.upload',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\command\\upload.py',
@@ -587,10 +574,6 @@
   ('setuptools._distutils.command.sdist',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\command\\sdist.py',
-   'PYMODULE'),
-  ('distutils.filelist',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\filelist.py',
    'PYMODULE'),
   ('glob',
    'C:\\Users\\kazuya '
@@ -719,10 +702,6 @@
   ('setuptools._distutils.command.build_ext',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\command\\build_ext.py',
-   'PYMODULE'),
-  ('distutils._msvccompiler',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\_msvccompiler.py',
    'PYMODULE'),
   ('concurrent.futures',
    'C:\\Users\\kazuya '
@@ -912,33 +891,9 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\command\\build.py',
    'PYMODULE'),
-  ('setuptools._distutils.command.bdist_wininst',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\command\\bdist_wininst.py',
-   'PYMODULE'),
   ('setuptools._distutils.command.bdist_rpm',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\command\\bdist_rpm.py',
-   'PYMODULE'),
-  ('setuptools._distutils.command.bdist_msi',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\command\\bdist_msi.py',
-   'PYMODULE'),
-  ('msilib.text',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\msilib\\text.py',
-   'PYMODULE'),
-  ('msilib.sequence',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\msilib\\sequence.py',
-   'PYMODULE'),
-  ('msilib.schema',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\msilib\\schema.py',
-   'PYMODULE'),
-  ('msilib',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\msilib\\__init__.py',
    'PYMODULE'),
   ('setuptools._distutils.command.bdist_dumb',
    'C:\\Users\\kazuya '
@@ -1152,6 +1107,10 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\_macos_compat.py',
    'PYMODULE'),
+  ('setuptools._distutils._log',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\_log.py',
+   'PYMODULE'),
   ('setuptools._distutils._functools',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_distutils\\_functools.py',
@@ -1344,379 +1303,6 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\jinja2\\nodes.py',
    'PYMODULE'),
-  ('pkg_resources',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\__init__.py',
-   'PYMODULE'),
-  ('packaging.version',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\version.py',
-   'PYMODULE'),
-  ('packaging.utils',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\utils.py',
-   'PYMODULE'),
-  ('packaging.tags',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\tags.py',
-   'PYMODULE'),
-  ('packaging.specifiers',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\specifiers.py',
-   'PYMODULE'),
-  ('packaging.requirements',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\requirements.py',
-   'PYMODULE'),
-  ('packaging.markers',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\markers.py',
-   'PYMODULE'),
-  ('packaging._tokenizer',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_tokenizer.py',
-   'PYMODULE'),
-  ('packaging._structures',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_structures.py',
-   'PYMODULE'),
-  ('packaging._parser',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_parser.py',
-   'PYMODULE'),
-  ('packaging._musllinux',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_musllinux.py',
-   'PYMODULE'),
-  ('packaging._manylinux',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_manylinux.py',
-   'PYMODULE'),
-  ('packaging._elffile',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_elffile.py',
-   'PYMODULE'),
-  ('packaging.__about__',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\__about__.py',
-   'PYMODULE'),
-  ('packaging',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.zipp',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\zipp.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing.util',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\util.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing.unicode',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\unicode.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing.testing',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\testing.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing.results',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\results.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing.helpers',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\helpers.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing.exceptions',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\exceptions.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing.core',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\core.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing.diagram',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\diagram\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing.common',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\common.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing.actions',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\actions.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.pyparsing',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.version',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.utils',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.tags',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\tags.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.specifiers',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.requirements',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.markers',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging._structures',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging._musllinux',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_musllinux.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging._manylinux',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_manylinux.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.__about__',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.more_itertools.recipes',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\recipes.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.more_itertools.more',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\more.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.more_itertools',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.jaraco.text',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\text\\__init__.py',
-   'PYMODULE'),
-  ('importlib.resources',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\resources.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.jaraco.functools',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\functools.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.jaraco.context',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\context.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.jaraco',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.importlib_resources.simple',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\simple.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.importlib_resources.readers',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\readers.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.importlib_resources.abc',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\abc.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.importlib_resources._legacy',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_legacy.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.importlib_resources._itertools',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_itertools.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.importlib_resources._compat',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_compat.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.importlib_resources._common',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_common.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.importlib_resources._adapters',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_adapters.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.importlib_resources',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.appdirs',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\appdirs.py',
-   'PYMODULE'),
-  ('win32com.shell.shellcon',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32comext\\shell\\shellcon.py',
-   'PYMODULE'),
-  ('win32com.shell',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32comext\\shell\\__init__.py',
-   'PYMODULE'),
-  ('win32com',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\__init__.py',
-   'PYMODULE'),
-  ('win32com.server.util',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\server\\util.py',
-   'PYMODULE'),
-  ('win32com.server.dispatcher',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\server\\dispatcher.py',
-   'PYMODULE'),
-  ('win32traceutil',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32\\lib\\win32traceutil.py',
-   'PYMODULE'),
-  ('win32com.util',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\util.py',
-   'PYMODULE'),
-  ('win32com.server.exception',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\server\\exception.py',
-   'PYMODULE'),
-  ('winerror',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32\\lib\\winerror.py',
-   'PYMODULE'),
-  ('win32com.server.policy',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\server\\policy.py',
-   'PYMODULE'),
-  ('win32com.client',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\client\\__init__.py',
-   'PYMODULE'),
-  ('win32com.client.makepy',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\client\\makepy.py',
-   'PYMODULE'),
-  ('pywin.dialogs.status',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\Pythonwin\\pywin\\dialogs\\status.py',
-   'PYMODULE'),
-  ('pywin.mfc.thread',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\Pythonwin\\pywin\\mfc\\thread.py',
-   'PYMODULE'),
-  ('pywin.mfc.object',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\Pythonwin\\pywin\\mfc\\object.py',
-   'PYMODULE'),
-  ('pywin.mfc.dialog',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\Pythonwin\\pywin\\mfc\\dialog.py',
-   'PYMODULE'),
-  ('pywin.mfc.window',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\Pythonwin\\pywin\\mfc\\window.py',
-   'PYMODULE'),
-  ('pywin.mfc',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\Pythonwin\\pywin\\mfc\\__init__.py',
-   'PYMODULE'),
-  ('pywin.dialogs',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\Pythonwin\\pywin\\dialogs\\__init__.py',
-   'PYMODULE'),
-  ('pywin',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\Pythonwin\\pywin\\__init__.py',
-   'PYMODULE'),
-  ('win32com.client.gencache',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\client\\gencache.py',
-   'PYMODULE'),
-  ('win32com.client.selecttlb',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\client\\selecttlb.py',
-   'PYMODULE'),
-  ('pywin.dialogs.list',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\Pythonwin\\pywin\\dialogs\\list.py',
-   'PYMODULE'),
-  ('commctrl',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32\\lib\\commctrl.py',
-   'PYMODULE'),
-  ('win32com.client.genpy',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\client\\genpy.py',
-   'PYMODULE'),
-  ('win32com.client.CLSIDToClass',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\client\\CLSIDToClass.py',
-   'PYMODULE'),
-  ('win32com.client.dynamic',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\client\\dynamic.py',
-   'PYMODULE'),
-  ('win32com.client.build',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\client\\build.py',
-   'PYMODULE'),
-  ('pywintypes',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32\\lib\\pywintypes.py',
-   'PYMODULE'),
-  ('pywin32_system32', '-', 'PYMODULE'),
-  ('win32com.server',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\server\\__init__.py',
-   'PYMODULE'),
-  ('win32com.universal',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\universal.py',
-   'PYMODULE'),
-  ('win32com.client.util',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\win32com\\client\\util.py',
-   'PYMODULE'),
-  ('pythoncom',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pythoncom.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources.extern',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\extern\\__init__.py',
-   'PYMODULE'),
-  ('imp',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\imp.py',
-   'PYMODULE'),
-  ('plistlib',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\plistlib.py',
-   'PYMODULE'),
   ('pyparsing',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pyparsing\\__init__.py',
@@ -1861,6 +1447,10 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\extern\\__init__.py',
    'PYMODULE'),
+  ('importlib.resources',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\importlib\\resources.py',
+   'PYMODULE'),
   ('setuptools._vendor.jaraco.functools',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\_vendor\\jaraco\\functools.py',
@@ -1953,6 +1543,14 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\command\\build_ext.py',
    'PYMODULE'),
+  ('distutils._msvccompiler',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\_msvccompiler.py',
+   'PYMODULE'),
+  ('distutils.extension',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\extension.py',
+   'PYMODULE'),
   ('setuptools.logging',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\logging.py',
@@ -1960,6 +1558,10 @@
   ('setuptools.monkey',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\monkey.py',
+   'PYMODULE'),
+  ('distutils.filelist',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\filelist.py',
    'PYMODULE'),
   ('setuptools.discovery',
    'C:\\Users\\kazuya '
@@ -2025,6 +1627,14 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\command\\sdist.py',
    'PYMODULE'),
+  ('setuptools.command.build',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\command\\build.py',
+   'PYMODULE'),
+  ('distutils.command.build',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\command\\build.py',
+   'PYMODULE'),
   ('setuptools.command.py36compat',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\setuptools\\command\\py36compat.py',
@@ -2032,6 +1642,298 @@
   ('distutils.command.sdist',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\command\\sdist.py',
+   'PYMODULE'),
+  ('pkg_resources',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\__init__.py',
+   'PYMODULE'),
+  ('packaging.version',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\version.py',
+   'PYMODULE'),
+  ('packaging.utils',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\utils.py',
+   'PYMODULE'),
+  ('packaging.tags',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\tags.py',
+   'PYMODULE'),
+  ('packaging.specifiers',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('packaging.requirements',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('packaging.markers',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\markers.py',
+   'PYMODULE'),
+  ('packaging._tokenizer',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('packaging._structures',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('packaging._parser',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('packaging._musllinux',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('packaging._manylinux',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('packaging._elffile',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('packaging',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.zipp',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\zipp.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.typing_extensions',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\typing_extensions.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing.util',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\util.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing.unicode',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\unicode.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing.testing',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\testing.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing.results',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\results.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing.helpers',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\helpers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing.exceptions',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\exceptions.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing.core',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\core.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing.diagram',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\diagram\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing.common',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\common.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing.actions',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\actions.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.pyparsing',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\pyparsing\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.windows',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\windows.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.version',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.unix',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\unix.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.macos',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\macos.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.api',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\api.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.android',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\android.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs.__main__',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__main__.py',
+   'PYMODULE'),
+  ('platformdirs',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\platformdirs\\__init__.py',
+   'PYMODULE'),
+  ('platformdirs.android',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\platformdirs\\android.py',
+   'PYMODULE'),
+  ('platformdirs.unix',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\platformdirs\\unix.py',
+   'PYMODULE'),
+  ('platformdirs.macos',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\platformdirs\\macos.py',
+   'PYMODULE'),
+  ('platformdirs.windows',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\platformdirs\\windows.py',
+   'PYMODULE'),
+  ('platformdirs.version',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\platformdirs\\version.py',
+   'PYMODULE'),
+  ('platformdirs.api',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\platformdirs\\api.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.platformdirs',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\platformdirs\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.version',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.utils',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.tags',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.specifiers',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.requirements',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.markers',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._structures',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._musllinux',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._manylinux',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.__about__',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.more_itertools.recipes',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\recipes.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.more_itertools.more',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\more.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.more_itertools',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\more_itertools\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco.text',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\text\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco.functools',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\functools.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco.context',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\context.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.jaraco',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\jaraco\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources.simple',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\simple.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources.readers',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\readers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources.abc',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\abc.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._legacy',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_legacy.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._itertools',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_itertools.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._compat',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_compat.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._common',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_common.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources._adapters',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\_adapters.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.importlib_resources',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\importlib_resources\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources.extern',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\pkg_resources\\extern\\__init__.py',
+   'PYMODULE'),
+  ('imp',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\imp.py',
+   'PYMODULE'),
+  ('plistlib',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\plistlib.py',
    'PYMODULE'),
   ('setuptools.config.pyprojecttoml',
    'C:\\Users\\kazuya '
@@ -2129,6 +2031,10 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\core.py',
    'PYMODULE'),
+  ('distutils.config',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\distutils\\config.py',
+   'PYMODULE'),
   ('_distutils_hack.override',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\_distutils_hack\\override.py',
@@ -2136,10 +2042,6 @@
   ('tracemalloc',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
-   'PYMODULE'),
-  ('stringprep',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
    'PYMODULE'),
   ('nturl2path',
    'C:\\Users\\kazuya '
@@ -2161,9 +2063,12 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
    'PYMODULE'),
-  ('PC_Converter_for_web_class',
+  ('stringprep',
    'C:\\Users\\kazuya '
-   'asai\\Dropbox\\nccatcher\\script\\PC_Converter_for_web_class.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('PC_Converter_for_web_class',
+   'D:\\Desktop\\make\\script\\PC_Converter_for_web_class.py',
    'PYMODULE'),
   ('pyperclip',
    'C:\\Users\\kazuya '
@@ -2201,6 +2106,10 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\idna\\__init__.py',
    'PYMODULE'),
+  ('idna.intranges',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\idna\\intranges.py',
+   'PYMODULE'),
   ('idna.core',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\idna\\core.py',
@@ -2208,10 +2117,6 @@
   ('idna.uts46data',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\idna\\uts46data.py',
-   'PYMODULE'),
-  ('idna.intranges',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\idna\\intranges.py',
    'PYMODULE'),
   ('idna.idnadata',
    'C:\\Users\\kazuya '
@@ -2421,10 +2326,6 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\cryptography\\hazmat\\bindings\\openssl\\__init__.py',
    'PYMODULE'),
-  ('cryptography.hazmat.backends.openssl.x509',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x509.py',
-   'PYMODULE'),
   ('cryptography.hazmat.backends.openssl.x448',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\cryptography\\hazmat\\backends\\openssl\\x448.py',
@@ -2453,13 +2354,13 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\cryptography\\hazmat\\primitives\\hashes.py',
    'PYMODULE'),
-  ('cryptography.hazmat.primitives.asymmetric.ed448',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
-   'PYMODULE'),
   ('cryptography.hazmat.primitives.asymmetric.ed25519',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed25519.py',
+   'PYMODULE'),
+  ('cryptography.hazmat.primitives.asymmetric.ed448',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\cryptography\\hazmat\\primitives\\asymmetric\\ed448.py',
    'PYMODULE'),
   ('cryptography.hazmat.primitives.asymmetric.ec',
    'C:\\Users\\kazuya '
@@ -2488,10 +2389,6 @@
   ('cryptography.hazmat.primitives.serialization',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\__init__.py',
-   'PYMODULE'),
-  ('cryptography.hazmat.primitives.serialization.pkcs7',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\cryptography\\hazmat\\primitives\\serialization\\pkcs7.py',
    'PYMODULE'),
   ('cryptography.hazmat.primitives.serialization.ssh',
    'C:\\Users\\kazuya '
@@ -2709,121 +2606,137 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\universaldetector.py',
    'PYMODULE'),
+  ('chardet.utf1632prober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\utf1632prober.py',
+   'PYMODULE'),
   ('chardet.sbcsgroupprober',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\sbcsgroupprober.py',
-   'PYMODULE'),
-  ('chardet.langturkishmodel',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langturkishmodel.py',
-   'PYMODULE'),
-  ('chardet.hebrewprober',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\hebrewprober.py',
-   'PYMODULE'),
-  ('chardet.charsetprober',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\charsetprober.py',
-   'PYMODULE'),
-  ('chardet.langhebrewmodel',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langhebrewmodel.py',
-   'PYMODULE'),
-  ('chardet.langthaimodel',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langthaimodel.py',
-   'PYMODULE'),
-  ('chardet.langbulgarianmodel',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langbulgarianmodel.py',
-   'PYMODULE'),
-  ('chardet.langgreekmodel',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langgreekmodel.py',
-   'PYMODULE'),
-  ('chardet.langcyrillicmodel',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langcyrillicmodel.py',
    'PYMODULE'),
   ('chardet.sbcharsetprober',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\sbcharsetprober.py',
    'PYMODULE'),
+  ('chardet.langturkishmodel',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langturkishmodel.py',
+   'PYMODULE'),
+  ('chardet.langthaimodel',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langthaimodel.py',
+   'PYMODULE'),
+  ('chardet.langrussianmodel',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langrussianmodel.py',
+   'PYMODULE'),
+  ('chardet.langhebrewmodel',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langhebrewmodel.py',
+   'PYMODULE'),
+  ('chardet.langgreekmodel',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langgreekmodel.py',
+   'PYMODULE'),
+  ('chardet.langbulgarianmodel',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\langbulgarianmodel.py',
+   'PYMODULE'),
+  ('chardet.hebrewprober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\hebrewprober.py',
+   'PYMODULE'),
   ('chardet.mbcsgroupprober',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\mbcsgroupprober.py',
    'PYMODULE'),
-  ('chardet.euctwprober',
+  ('chardet.utf8prober',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\euctwprober.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\utf8prober.py',
    'PYMODULE'),
   ('chardet.mbcssm',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\mbcssm.py',
    'PYMODULE'),
-  ('chardet.chardistribution',
+  ('chardet.codingstatemachinedict',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\chardistribution.py',
-   'PYMODULE'),
-  ('chardet.jisfreq',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\jisfreq.py',
-   'PYMODULE'),
-  ('chardet.big5freq',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\big5freq.py',
-   'PYMODULE'),
-  ('chardet.gb2312freq',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\gb2312freq.py',
-   'PYMODULE'),
-  ('chardet.euckrfreq',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\euckrfreq.py',
-   'PYMODULE'),
-  ('chardet.euctwfreq',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\euctwfreq.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\codingstatemachinedict.py',
    'PYMODULE'),
   ('chardet.codingstatemachine',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\codingstatemachine.py',
    'PYMODULE'),
+  ('chardet.sjisprober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\sjisprober.py',
+   'PYMODULE'),
   ('chardet.mbcharsetprober',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\mbcharsetprober.py',
-   'PYMODULE'),
-  ('chardet.big5prober',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\big5prober.py',
-   'PYMODULE'),
-  ('chardet.cp949prober',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\cp949prober.py',
-   'PYMODULE'),
-  ('chardet.euckrprober',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\euckrprober.py',
-   'PYMODULE'),
-  ('chardet.gb2312prober',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\gb2312prober.py',
-   'PYMODULE'),
-  ('chardet.eucjpprober',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\eucjpprober.py',
    'PYMODULE'),
   ('chardet.jpcntx',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\jpcntx.py',
    'PYMODULE'),
-  ('chardet.sjisprober',
+  ('chardet.chardistribution',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\sjisprober.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\chardistribution.py',
    'PYMODULE'),
-  ('chardet.utf8prober',
+  ('chardet.johabfreq',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\utf8prober.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\johabfreq.py',
+   'PYMODULE'),
+  ('chardet.jisfreq',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\jisfreq.py',
+   'PYMODULE'),
+  ('chardet.gb2312freq',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\gb2312freq.py',
+   'PYMODULE'),
+  ('chardet.euctwfreq',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\euctwfreq.py',
+   'PYMODULE'),
+  ('chardet.euckrfreq',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\euckrfreq.py',
+   'PYMODULE'),
+  ('chardet.big5freq',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\big5freq.py',
+   'PYMODULE'),
+  ('chardet.johabprober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\johabprober.py',
+   'PYMODULE'),
+  ('chardet.gb2312prober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\gb2312prober.py',
+   'PYMODULE'),
+  ('chardet.euctwprober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\euctwprober.py',
+   'PYMODULE'),
+  ('chardet.euckrprober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\euckrprober.py',
+   'PYMODULE'),
+  ('chardet.eucjpprober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\eucjpprober.py',
+   'PYMODULE'),
+  ('chardet.cp949prober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\cp949prober.py',
+   'PYMODULE'),
+  ('chardet.big5prober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\big5prober.py',
+   'PYMODULE'),
+  ('chardet.macromanprober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\macromanprober.py',
    'PYMODULE'),
   ('chardet.latin1prober',
    'C:\\Users\\kazuya '
@@ -2837,17 +2750,21 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\escsm.py',
    'PYMODULE'),
+  ('chardet.resultdict',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\resultdict.py',
+   'PYMODULE'),
   ('chardet.enums',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\enums.py',
    'PYMODULE'),
+  ('chardet.charsetprober',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\charsetprober.py',
+   'PYMODULE'),
   ('chardet.charsetgroupprober',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\charsetgroupprober.py',
-   'PYMODULE'),
-  ('chardet.compat',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\chardet\\compat.py',
    'PYMODULE'),
   ('charset_normalizer',
    'C:\\Users\\kazuya '
@@ -2876,10 +2793,6 @@
   ('charset_normalizer.cd',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\charset_normalizer\\cd.py',
-   'PYMODULE'),
-  ('charset_normalizer.md',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\charset_normalizer\\md.py',
    'PYMODULE'),
   ('charset_normalizer.legacy',
    'C:\\Users\\kazuya '
@@ -3177,10 +3090,6 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\testing\\_private\\extbuild.py',
    'PYMODULE'),
-  ('numpy.testing._private',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\testing\\_private\\__init__.py',
-   'PYMODULE'),
   ('numpy.testing._private.utils',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\testing\\_private\\utils.py',
@@ -3209,13 +3118,13 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\core\\arrayprint.py',
    'PYMODULE'),
-  ('numpy.core._ufunc_config',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\core\\_ufunc_config.py',
-   'PYMODULE'),
   ('numpy.core.shape_base',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\core\\shape_base.py',
+   'PYMODULE'),
+  ('numpy.core._ufunc_config',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\core\\_ufunc_config.py',
    'PYMODULE'),
   ('numpy.core._exceptions',
    'C:\\Users\\kazuya '
@@ -3252,6 +3161,10 @@
   ('numpy.core._string_helpers',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\core\\_string_helpers.py',
+   'PYMODULE'),
+  ('numpy.testing._private',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\testing\\_private\\__init__.py',
    'PYMODULE'),
   ('numpy.matrixlib',
    'C:\\Users\\kazuya '
@@ -3456,10 +3369,6 @@
   ('numpy.compat.py3k',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\compat\\py3k.py',
-   'PYMODULE'),
-  ('numpy.compat._pep440',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\numpy\\compat\\_pep440.py',
    'PYMODULE'),
   ('numpy.core',
    'C:\\Users\\kazuya '
@@ -3788,6 +3697,10 @@
   ('PIL.ImageMode',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\PIL\\ImageMode.py',
+   'PYMODULE'),
+  ('PIL.ExifTags',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\PIL\\ExifTags.py',
    'PYMODULE'),
   ('PIL.ImageGrab',
    'C:\\Users\\kazuya '
