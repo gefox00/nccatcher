@@ -2039,13 +2039,9 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\_distutils_hack\\override.py',
    'PYMODULE'),
-  ('_py_abc',
+  ('tracemalloc',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
-   'PYMODULE'),
-  ('stringprep',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
    'PYMODULE'),
   ('nturl2path',
    'C:\\Users\\kazuya '
@@ -2063,9 +2059,25 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\http\\cookiejar.py',
    'PYMODULE'),
-  ('tracemalloc',
+  ('_py_abc',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('sqlite3',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\sqlite3\\__init__.py',
+   'PYMODULE'),
+  ('sqlite3.dump',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\sqlite3\\dump.py',
+   'PYMODULE'),
+  ('sqlite3.dbapi2',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\sqlite3\\dbapi2.py',
    'PYMODULE'),
   ('PC_Converter_for_web_class',
    'D:\\Desktop\\nccatcher\\script\\PC_Converter_for_web_class.py',

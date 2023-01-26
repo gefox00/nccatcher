@@ -4,7 +4,7 @@ import pyperclip
 from PC_Converter_for_web_class import Nccatcher
 from time import sleep
 import sqlite3
-
+# https: // charasheet.vampire - blood.net / list_nechro.html?name = % E3 % 81 % 82
 # データベース操作追加
 # コンバーターとコンバート履歴はGUIを分ける使いづらいと感じたら統合する
 dbname = 'data_file/my_char.db'
@@ -58,8 +58,8 @@ while True:
                 Sg.popup('変換結果をクリップボードにコピーしました', title='コピーしました', no_titlebar=True)
                 # 変換したデータをデータベースにインサート
                 # ただし同一キャラ名のキャラはのぞく
-                push_data = {get_json.ch_data_js['data']['name']: get_json.ch_data}
-                if cur.execute(f'SELECT COUNT(*) FROM character WHERE name = "{push_data.keys()}"').rowcount > 0:
+                push_data = [get_json.ch_data_js['data']['name'], get_json.ch_data]
+                if cur.execute(f'SELECT COUNT(*) FROM character WHERE name = "{push_data[0]}"').rowcount > 0:
                     value = Sg.popup_ok_cancel('同一名のデータが存在します\nデータを更新しますか？',
                                                title='重複検知',
                                                no_titlebar=True)
@@ -68,7 +68,9 @@ while True:
 
                 else:
                     # 同一データが存在しないのでデータをインサートする
-                    cur.execute(f'INSERT INTO character(name, data) VALUES({push_data.keys()}, {push_data.values()})')
+                    cur.execute(f'INSERT INTO character(name, data) VALUES("{push_data[0]}", \'{str(push_data[1])}\')')
+
+                    conn.commit()
 
 
             else:

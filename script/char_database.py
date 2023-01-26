@@ -23,7 +23,7 @@ layout = [
              Sg.Button('選択データを削除', size=33, key='bt_delete')]
          ]
 # ウィンドウタイトル設定
-window = Sg.Window(title='コンバーター', layout=layout)
+window = Sg.Window(title='cocoホリック', layout=layout)
 while True:
     # イベントハンドラ
     event, values = window.read()
