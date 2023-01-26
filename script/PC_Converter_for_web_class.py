@@ -139,3 +139,4 @@ class Nccatcher:
         out_data['data'] = temp
         # 変換したデータをオブジェクトで保持
         self.ch_data = str(out_data).replace('\'', '"')
+        self.ch_data_js = out_data
