@@ -1,4 +1,4 @@
-('D:\\Desktop\\make\\script\\build\\PC_Converter_for_web_GUI\\PYZ-00.pyz',
+('D:\\Desktop\\nccatcher\\script\\build\\PC_Converter_for_web_GUI\\PYZ-00.pyz',
  [('_distutils_hack',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\_distutils_hack\\__init__.py',
@@ -2039,9 +2039,13 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\_distutils_hack\\override.py',
    'PYMODULE'),
-  ('tracemalloc',
+  ('_py_abc',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
    'PYMODULE'),
   ('nturl2path',
    'C:\\Users\\kazuya '
@@ -2059,16 +2063,12 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\http\\cookiejar.py',
    'PYMODULE'),
-  ('_py_abc',
+  ('tracemalloc',
    'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
-   'PYMODULE'),
-  ('stringprep',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
    'PYMODULE'),
   ('PC_Converter_for_web_class',
-   'D:\\Desktop\\make\\script\\PC_Converter_for_web_class.py',
+   'D:\\Desktop\\nccatcher\\script\\PC_Converter_for_web_class.py',
    'PYMODULE'),
   ('pyperclip',
    'C:\\Users\\kazuya '
