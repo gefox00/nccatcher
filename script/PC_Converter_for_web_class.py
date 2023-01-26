@@ -4,9 +4,12 @@ import json
 class Nccatcher:
     # 変換結果を格納
     ch_data = ""
+    ch_data_js = {}
 
     def __init__(self, data: {}, url: str):
         self.conv(data, url)
+
+
 
     # 処理本体
     def conv(self, jsdata: {}, ch_url):
@@ -80,9 +83,16 @@ class Nccatcher:
                             insert = much[m]
                     # マッチした場合はマニューバデータにテキストを差し込み
                     parts_data.append(f'[{partdata[int(hantei)]}] '
-                                      f'{name}:{timingdata[int(timing)]}:{cost}:{d_range}:{insert}')
+                                      f'{name}:'
+                                      f'{timingdata[int(timing)]}:'
+                                      f'{cost}:'
+                                      f'{d_range}:'
+                                      f'{insert}')
+                    # この処理自体例外の出しようがないので下記のエグゼプトは実行されない気がする
+                    #
                 except KeyError:
                     # マッチしなければ大元のデータを引用する
+                    # 例外のおきようがない気がするのでこの処理は必要ない気がする
                     parts_data.append(f'[{partdata[int(hantei)]}] '
                                       f'{name}:{timingdata[int(timing)]}:{cost}:{d_range}:{memo}')
                 finally:
