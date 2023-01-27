@@ -58,6 +58,4 @@ while True:
             combo_init.append(i[0])
         window['cb'].update(combo_init)
         Sg.Ok('データ再読み込み完了')
-
-
 conn.close()

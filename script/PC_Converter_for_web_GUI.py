@@ -7,7 +7,7 @@ import sqlite3
 # デバッグ用フラグ
 # ログボックスフラグ
 # このフラグは手動で切替て使うことにする
-debug_log = True
+debug_log = False
 #　【メモ】 https: // charasheet.vampire - blood.net / list_nechro.html?name = % E3 % 81 % 82
 # データベース操作追加
 # コンバーターとコンバート履歴はGUIを分ける使いづらいと感じたら統合する
@@ -88,21 +88,23 @@ while True:
                 # テーブルにインサートするデータと一致するデータがあるか検索して結果を格納
                 row_count = cur.execute(f'SELECT COUNT(*) FROM character WHERE name = "{push_data[0]}"').fetchone()[0]
                 # GUIの情報とデータベースの情報から処理を分岐する
-                if int(row_count) > 0 and window['chb'].get():
-                    # データベース保存にチェックが入っていて同一キャラ名があったら重複検知をポップアップする
-                    value = Sg.popup_ok_cancel('同一名のデータが存在します\nデータを更新しますか？',
-                                               title='重複検知',
-                                               no_titlebar=True)
-                    # データの更新意思を確認
-                    if value == 'OK':
-                        cur.execute(f'UPDATE character '
-                                    f'SET name = "{push_data[0]}" AND data = \'{str(push_data[1])}\''
-                                    f'WHERE name = "{push_data[0]}"')
+                # データベースにデータを登録するかチェック
+                if window['chb'].get():
+                    if int(row_count) > 0:
+                        # データベース保存にチェックが入っていて同一キャラ名があったら重複検知をポップアップする
+                        value = Sg.popup_ok_cancel('同一名のデータが存在します\nデータを更新しますか？',
+                                                   title='重複検知',
+                                                   no_titlebar=True)
+                        # データの更新意思を確認
+                        if value == 'OK':
+                            cur.execute(f'UPDATE character '
+                                        f'SET data = \'{str(push_data[1])}\''
+                                        f'WHERE character.name = "{push_data[0]}"')
+                            conn.commit()
+                    else:
+                        # 同一データが存在しないのでデータをインサートする
+                        cur.execute(f'INSERT INTO character(name, data) VALUES("{push_data[0]}", \'{str(push_data[1])}\')')
                         conn.commit()
-                else:
-                    # 同一データが存在しないときはデータをインサートする
-                    cur.execute(f'INSERT INTO character(name, data) VALUES("{push_data[0]}", \'{str(push_data[1])}\')')
-                    conn.commit()
             else:
                 Sg.popup_error('対応できないURLが指定されました',
                                title='error',
