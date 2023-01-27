@@ -13,7 +13,7 @@ cur = conn.cursor()
 # テーブルの存在をチェックしてテーブルが存在しないときは作成する
 cur.execute('CREATE TABLE IF NOT EXISTS character(name STRING, data STRING)')
 
-pyperclip.copy("https://charasheet.vampire-blood.net/me58c7745269933f1080637f585dfa201")
+# pyperclip.copy("https://charasheet.vampire-blood.net/me58c7745269933f1080637f585dfa201")
 # ウィンドウに配置するコンポーネント設定
 layout = [
             # URL入力用テキストボックスと文字列の配置
