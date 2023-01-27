@@ -15,7 +15,6 @@ config = {}
 if os.path.isfile('data_file/config.json'):
     with open('data_file/config.json', 'r', encoding='utf8')as r:
         config = json.load(r)
-        print(config)
 else:
     with open('data_file/config.json', 'w', encoding='utf8') as w:
         config['dbcheck'] = True
