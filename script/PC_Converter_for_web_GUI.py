@@ -4,40 +4,52 @@ import pyperclip
 from PC_Converter_for_web_class import Nccatcher
 from time import sleep
 import sqlite3
+import os
+import json
 # デバッグ用フラグ
 # ログボックスフラグ
 # このフラグは手動で切替て使うことにする
 debug_log = False
+# コンフィグ？
+config = {}
+if os.path.isfile('data_file/config.json'):
+    with open('data_file/config.json', 'r', encoding='utf8')as r:
+        config = json.load(r)
+        print(config)
+else:
+    with open('data_file/config.json', 'w', encoding='utf8') as w:
+        config['dbcheck'] = True
+        config['lastchar'] = True
+        config['URL'] = ''
+        json.dump(config, w)
 #　【メモ】 https: // charasheet.vampire - blood.net / list_nechro.html?name = % E3 % 81 % 82
 # データベース操作追加
 # コンバーターとコンバート履歴はGUIを分ける使いづらいと感じたら統合する
 # データベースをオープンしてテーブルをセットする
 dbname = 'data_file/my_char.db'
+# dbname = 'https://github.com/gefox00/nccatcher/blob/master/script/dist/data_file/my_char.db'
 conn = sqlite3.connect(dbname)
 cur = conn.cursor()
 # テーブルの存在をチェックしてテーブルが存在しないときは作成する
 cur.execute('CREATE TABLE IF NOT EXISTS character(name STRING, data STRING)')
 cur.execute('CREATE TABLE IF NOT EXISTS maneuver(name STRING, equip INTEGER, '
             'timing INTEGER, cost INTEGER, range INTEGER, text STRING)')
+cur.execute('CREATE TABLE IF NOT EXISTS rule(name STRING)')
 # ねんのためコミット
 conn.commit()
-
 # ウィンドウに配置するコンポーネント設定
-layout = [
-            # URL入力用テキストボックスと文字列の配置
-            [Sg.Text('URLを張り付けてください'), Sg.Input(size=(62, 1), key='tb_open')],
-            [Sg.Checkbox('データベースに記憶する', key='chb')],
-            # ボタンの配置1
-            [Sg.Button('変換開始', size=37, key='bt_start'),
-             # ボタンの配置
-             Sg.Button('クリップボードにコピー', size=37, key='bt_copy')]
-            # 変換結果表示用テキストボックスの配置
-         ]
+layout = [[Sg.Text('URLを張り付けてください'), Sg.Input(default_text=config['URL'], size=(64, 1), key='tb_open')]]
+
+layout.append([Sg.Checkbox('データベースに記憶する', key='chb_dbc', default=bool(config['dbcheck'])),
+               Sg.Checkbox('最後に変換したキャラを記憶する', key='chb_last', default=bool(config['lastchar']))])
+layout.append([Sg.Button('変換開始', size=38, key='bt_start'), Sg.Button('クリップボードにコピー', size=38, key='bt_copy')])
 # デバッグ機能デバッグフラグがTrueになってるときはGUIのlogを非表示にして
 # 各logにたいしてなにか操作する処理を無効にする
 if debug_log:
+    # デバッグがオフの時はログをlayoutに追加
     layout.append([Sg.Output(size=(78, 20), key='log')])
 else:
+    # gefoxの作ったキャラシ
     pyperclip.copy("https://charasheet.vampire-blood.net/me58c7745269933f1080637f585dfa201")
 
 # ウィンドウタイトル設定
@@ -90,6 +102,7 @@ while True:
                 # GUIの情報とデータベースの情報から処理を分岐する
                 # データベースにデータを登録するかチェック
                 if window['chb'].get():
+                    config['dbcheck'] = window['chb'].get()
                     if int(row_count) > 0:
                         # データベース保存にチェックが入っていて同一キャラ名があったら重複検知をポップアップする
                         value = Sg.popup_ok_cancel('同一名のデータが存在します\nデータを更新しますか？',
@@ -103,7 +116,8 @@ while True:
                             conn.commit()
                     else:
                         # 同一データが存在しないのでデータをインサートする
-                        cur.execute(f'INSERT INTO character(name, data) VALUES("{push_data[0]}", \'{str(push_data[1])}\')')
+                        cur.execute(f'INSERT INTO character(name, data) '
+                                    f'VALUES("{push_data[0]}", \'{str(push_data[1])}\')')
                         conn.commit()
             else:
                 Sg.popup_error('対応できないURLが指定されました',
@@ -128,6 +142,12 @@ while True:
             # urlの入力なしにボタンを押下した場合は警告表示する
             # 他に処理はしない
             Sg.popup_error('コピーすべきデータがありません', title='error', no_titlebar=True)
+# GUIの情報をJsonに保存
+with open('data_file/config.json', 'w', encoding='utf8')as w:
+    config['dbcheck'] = window['chb_dbc'].get()
+    config['lastchar'] = window['chb_last'].get()
+    config['URL'] = window['tb_open'].get()
+    json.dump(config, w, indent=4)
 # データベースの最終コミットと領域開放した後にデータベースを閉じる
 conn.commit()
 cur.execute('VACUUM')

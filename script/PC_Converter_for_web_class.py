@@ -7,6 +7,7 @@ class Nccatcher:
     ch_data = ""
     ch_data_js = {}
 
+
     def __init__(self, data: {}, url: str, db_dir: str = 'data_file/my_char.db'):
         self.conv(data, url)
 
