@@ -7,6 +7,17 @@ class Nccatcher:
     ch_data = ""
     ch_data_js = {}
 
+    dbname = 'data_file/my_char.db'
+    conn = sqlite3.connect(dbname)
+    cur = conn.cursor()
+
+    def __del__(self):
+        self.dispose(self.conn, self.cur)
+
+    def dispose(self, del_conn, del_cur):
+        del_conn.commit()
+        del_cur.execute('VACUUM')
+        del_conn.close()
 
     def __init__(self, data: {}, url: str, db_dir: str = 'data_file/my_char.db'):
         self.conv(data, url)
@@ -73,6 +84,8 @@ class Nccatcher:
                         eq_l += 1
                 # 辞書型の仕様を利用してマニューバの名前でdata.jsonから検索してテキストをマッチング
                 try:
+
+
                     # 例外のおきようなくね？
                     # 今後修正検討箇所
                     insert = ''
