@@ -9,7 +9,7 @@ import json
 # デバッグ用フラグ
 # ログボックスフラグ
 # このフラグは手動で切替て使うことにする
-debug_log = False
+debug_log = True
 # コンフィグ？
 config = {}
 if os.path.isfile('data_file/config.json'):
