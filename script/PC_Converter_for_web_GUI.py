@@ -24,28 +24,19 @@ conn.commit()
 # デバッグ用
 #
 # ウィンドウに配置するコンポーネント設定
+layout = [
+            # URL入力用テキストボックスと文字列の配置
+            [Sg.Text('URLを張り付けてください'), Sg.Input(size=(62, 1), key='tb_open')],
+            [Sg.Checkbox('データベースに記憶する', key='chb')],
+            # ボタンの配置1
+            [Sg.Button('変換開始', size=37, key='bt_start'),
+             # ボタンの配置
+             Sg.Button('クリップボードにコピー', size=37, key='bt_copy')]
+            # 変換結果表示用テキストボックスの配置
+         ]
 if debug_log:
-    layout = [
-                # URL入力用テキストボックスと文字列の配置
-                [Sg.Text('URLを張り付けてください'), Sg.Input(size=(62, 1), key='tb_open')],
-                [Sg.Checkbox('データベースに記憶する', key='chb')],
-                # ボタンの配置1
-                [Sg.Button('変換開始', size=37, key='bt_start'),
-                 # ボタンの配置
-                 Sg.Button('クリップボードにコピー', size=37, key='bt_copy')]
-                # 変換結果表示用テキストボックスの配置
-                , [Sg.Output(size=(78, 20), key='log')]
-             ]
+    layout.append([Sg.Output(size=(78, 20), key='log')])
 else:
-    layout = [
-        # URL入力用テキストボックスと文字列の配置
-        [Sg.Text('URLを張り付けてください'), Sg.Input(size=(62, 1), key='tb_open')],
-        [Sg.Checkbox('データベースに記憶する', key='chb')],
-        # ボタンの配置1
-        [Sg.Button('変換開始', size=37, key='bt_start'),
-         # ボタンの配置
-         Sg.Button('クリップボードにコピー', size=37, key='bt_copy')]
-    ]
     pyperclip.copy("https://charasheet.vampire-blood.net/me58c7745269933f1080637f585dfa201")
 
 # ウィンドウタイトル設定
