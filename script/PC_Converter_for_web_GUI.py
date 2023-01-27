@@ -6,9 +6,9 @@ from time import sleep
 import sqlite3
 # デバッグ用フラグ
 # ログボックスフラグ
-debug_log = False
-
-# https: // charasheet.vampire - blood.net / list_nechro.html?name = % E3 % 81 % 82
+# このフラグは手動で切替て使うことにする
+debug_log = True
+#　【メモ】 https: // charasheet.vampire - blood.net / list_nechro.html?name = % E3 % 81 % 82
 # データベース操作追加
 # コンバーターとコンバート履歴はGUIを分ける使いづらいと感じたら統合する
 # データベースをオープンしてテーブルをセットする
@@ -19,10 +19,9 @@ cur = conn.cursor()
 cur.execute('CREATE TABLE IF NOT EXISTS character(name STRING, data STRING)')
 cur.execute('CREATE TABLE IF NOT EXISTS maneuver(name STRING, equip INTEGER, '
             'timing INTEGER, cost INTEGER, range INTEGER, text STRING)')
-
+# ねんのためコミット
 conn.commit()
-# デバッグ用
-#
+
 # ウィンドウに配置するコンポーネント設定
 layout = [
             # URL入力用テキストボックスと文字列の配置
@@ -34,6 +33,8 @@ layout = [
              Sg.Button('クリップボードにコピー', size=37, key='bt_copy')]
             # 変換結果表示用テキストボックスの配置
          ]
+# デバッグ機能デバッグフラグがTrueになってるときはGUIのlogを非表示にして
+# 各logにたいしてなにか操作する処理を無効にする
 if debug_log:
     layout.append([Sg.Output(size=(78, 20), key='log')])
 else:
