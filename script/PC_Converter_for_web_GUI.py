@@ -26,7 +26,7 @@ else:
 # コンバーターとコンバート履歴はGUIを分ける使いづらいと感じたら統合する
 # データベースをオープンしてテーブルをセットする
 dbname = 'data_file/my_char.db'
-# dbname = 'https://github.com/gefox00/nccatcher/blob/master/script/dist/data_file/my_char.db'
+
 conn = sqlite3.connect(dbname)
 cur = conn.cursor()
 # テーブルの存在をチェックしてテーブルが存在しないときは作成する
