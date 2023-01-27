@@ -83,20 +83,24 @@ while True:
                 Sg.popup('変換結果をクリップボードにコピーしました', title='コピーしました', no_titlebar=True)
                 # 変換したデータをデータベースにインサート
                 # ただし同一キャラ名のキャラはのぞく
+                # テーブルにインサートするデータを作成
                 push_data = [get_json.ch_data_js['data']['name'], get_json.ch_data]
-                cur.execute(f'SELECT COUNT(*) FROM character WHERE name = "{push_data[0]}"')
+                # テーブルにインサートするデータと一致するデータがあるか検索して結果を格納
                 row_count = cur.execute(f'SELECT COUNT(*) FROM character WHERE name = "{push_data[0]}"').fetchone()[0]
+                # GUIの情報とデータベースの情報から処理を分岐する
                 if int(row_count) > 0 and window['chb'].get():
+                    # データベース保存にチェックが入っていて同一キャラ名があったら重複検知をポップアップする
                     value = Sg.popup_ok_cancel('同一名のデータが存在します\nデータを更新しますか？',
                                                title='重複検知',
                                                no_titlebar=True)
+                    # データの更新意思を確認
                     if value == 'OK':
                         cur.execute(f'UPDATE character '
                                     f'SET name = "{push_data[0]}" AND data = \'{str(push_data[1])}\''
                                     f'WHERE name = "{push_data[0]}"')
                         conn.commit()
                 else:
-                    # 同一データが存在しないのでデータをインサートする
+                    # 同一データが存在しないときはデータをインサートする
                     cur.execute(f'INSERT INTO character(name, data) VALUES("{push_data[0]}", \'{str(push_data[1])}\')')
                     conn.commit()
             else:
