@@ -1,15 +1,5 @@
 import sqlite3
+import requests
 
-
-dbname = 'data_file/my_char.db'
-# DBを作成する（既に作成されていたらこのDBに接続する）
-conn = sqlite3.connect(dbname)
-cur = conn.cursor()
-data = cur.execute('SELECT * FROM character')
-
-for i in data:
-    print(i)
-
-
-# DBとの接続を閉じる(必須)
-conn.close()
+data = requests.get('https://charasheet.vampire-blood.net/4745469#top.js')
+print(data.content)

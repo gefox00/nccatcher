@@ -1,4 +1,5 @@
 import json
+import sqlite3
 
 
 class Nccatcher:
@@ -6,10 +7,8 @@ class Nccatcher:
     ch_data = ""
     ch_data_js = {}
 
-    def __init__(self, data: {}, url: str):
+    def __init__(self, data: {}, url: str, db_dir: str = 'data_file/my_char.db'):
         self.conv(data, url)
-
-
 
     # 処理本体
     def conv(self, jsdata: {}, ch_url):
