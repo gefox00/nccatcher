@@ -7,7 +7,6 @@ import sqlite3
 import os
 import json
 # デバッグ用フラグ
-# ログボックスフラグ
 # このフラグは手動で切替て使うことにする
 debug_log = True
 # コンフィグ？
