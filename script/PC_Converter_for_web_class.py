@@ -1,5 +1,6 @@
 import json
 import sqlite3
+from time import sleep
 
 
 class Nccatcher:
@@ -10,14 +11,19 @@ class Nccatcher:
     dbname = 'data_file/my_char.db'
     conn = sqlite3.connect(dbname)
     cur = conn.cursor()
-
-    def __del__(self):
-        self.dispose(self.conn, self.cur)
-
-    def dispose(self, del_conn, del_cur):
-        del_conn.commit()
-        del_cur.execute('VACUUM')
-        del_conn.close()
+    # ???デストラクタでエラー出たぞ???
+    # def __del__(self):
+    #     self.dispose(self.conn, self.cur)
+    #
+    # def dispose(self, del_conn, del_cur):
+    #     del_conn.commit()
+    #     del_cur.execute('VACUUM')
+    #     del_conn.close()
+    #     sleep(1)
+    #
+    # def close(self):
+    #     self.cur.close()
+    #     self.conn.close()
 
     def __init__(self, data: {}, url: str = '', db_dir: str = 'data_file/my_char.db'):
         self.conv(data, url)

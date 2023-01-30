@@ -1,257 +1,107 @@
 {
-    "is_disp_status": "0",
-    "position": "0",
-    "V_Position": "0",
-    "Position_Name": "",
-    "MCLS": "0",
-    "V_MCLS": "0",
-    "MCLS_Name": "",
-    "MC1": "0",
-    "MC2": "0",
-    "MC3": "0",
-    "SCLS": "0",
-    "V_SCLS": "0",
-    "SCLS_Name": "",
-    "SC1": "0",
-    "SC2": "0",
-    "SC3": "0",
-    "ST_Bonus": "0",
-    "TM1": "",
-    "TM2": "",
-    "TM3": "",
-    "NP1": "0",
-    "NP2": "0",
-    "NP3": "0",
-    "is_disp_speed": "1",
-    "Act_parts_A": "",
-    "Act_parts_B": "",
-    "Act_parts_C": "",
-    "Act_Total": "8",
-    "nou_alive": "1",
-    "Act_partsA_alive": "1",
-    "Act_PartsA_Ef": "",
-    "Act_partsB_alive": "1",
-    "Act_PartsB_Ef": "",
-    "Act_partsC_alive": "1",
-    "Act_PartsC_Ef": "",
-    "is_disp_power": "1",
-    "is_disp_peffect": "0",
-    "bui_break": "0",
-    "kihon_parts": "0",
-    "VS_S1": "on",
-    "VS_P1": "on",
-    "VS_S2": "on",
-    "VS_P2": "on",
-    "VS_S3": "on",
-    "VS_P3": "on",
-    "VS_S4": "on",
-    "VS_P4": "on",
-    "VS_S5": "on",
-    "VS_P5": "on",
-    "VS_S6": "on",
-    "VS_P6": "on",
-    "VS_S7": "on",
-    "VS_P7": "on",
-    "Power_Lost": [
-        "0",
-        "0",
-        "0"
-    ],
-    "Power_Used": [
-        "0",
-        "0",
-        "0"
-    ],
-    "Pow_Type": "5",
-    "Power_Type": [
-        "1",
-        "7",
-        "5"
-    ],
-    "Power_hantei": [
-        "0",
-        "0",
-        "0"
-    ],
-    "V_Power_hantei": [
-        "0",
-        "0",
-        "0"
-    ],
-    "Power_name": [
-        "\u3072\u304d\u3055\u304f",
-        "\u3088\u308d\u3081\u304f",
-        "\u3080\u3089\u304c\u308b"
-    ],
-    "Power_id": [
-        "0",
-        "0",
-        "0"
-    ],
-    "Power_timing": [
-        "1",
-        "1",
-        "4"
-    ],
-    "V_Power_timing": [
-        "1",
-        "1",
-        "4"
-    ],
-    "Power_cost": [
-        "\uff12",
-        "\uff13",
-        "\uff10"
-    ],
-    "Power_range": [
-        "\uff10",
-        "\u81ea\u8eab",
-        "\uff10"
-    ],
-    "Power_memo": [
-        "\u8089\u5f3e1\uff0b\u9023\u6483\uff08\u540c\u30a8\u30ea\u30a2\u306e\u30be\u30f3\u30d3\u306e\u6570\u00f710\uff09\uff08\u5207\u6368\uff09",
-        "\uff11",
-        "\u79fb\u52d5\u59a8\u5bb3\uff11"
-    ],
-    "Power_shozoku": [
-        "",
-        "",
-        ""
-    ],
-    "is_disp_carma": "0",
-    "carma_completed": [
-        "",
-        "",
-        ""
-    ],
-    "carma_name": [
-        "\u8a18\u61b6\u306e\u30ab\u30b1\u30e9\u3092\u7372\u5f97\u3059\u308b",
-        "",
-        ""
-    ],
-    "carma_memo": [
-        "",
-        "",
-        ""
-    ],
-    "is_disp_skill": "0",
-    "kakera_name": [
-        ""
-    ],
-    "kakera_memo": [
-        ""
-    ],
-    "is_disp_roice": "0",
-    "roice_name": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-    ],
-    "sl_roice": "0",
-    "roice_pos": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-    ],
-    "roice_id": [
-        "0",
-        "0",
-        "0",
-        "0",
-        "0",
-        "0"
-    ],
-    "roice_dmg": "3",
-    "roice_damage": [
-        "3",
-        "3",
-        "3",
-        "3",
-        "3",
-        "3"
-    ],
-    "roice_neg": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-    ],
-    "roice_break": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-    ],
-    "roice_memo": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-    ],
-    "is_disp_SesHistory": "0",
-    "exp_his_sum": "0",
-    "adv_exp_his": [
-        "",
-        "",
-        ""
-    ],
-    "bns_exp_his": [
-        "",
-        "",
-        ""
-    ],
-    "get_exp_his": [
-        "0",
-        "0",
-        "0"
-    ],
-    "seicho_memo_his": [
-        "",
-        "",
-        ""
-    ],
-    "is_disp_personal": "1",
-    "pc_name": "",
-    "pc_tags": "\u30ec\u30ae\u30aa\u30f3",
-    "shuzoku": "",
-    "age": "",
-    "V_sex": "",
-    "SL_sex": "0",
-    "sex": "\u7149\u7344",
-    "pc_height": "",
-    "pc_weight": "",
-    "pc_carma": "",
-    "color_hair": "",
-    "color_eye": "",
-    "color_skin": "",
-    "pc_making_memo": "",
-    "pc_making_memo_rows": "6",
-    "message": "\u30dd\u30b8\u30b7\u30e7\u30f3,\u30e1\u30a4\u30f3\u30af\u30e9\u30b9,\u30b5\u30d6\u30af\u30e9\u30b9,\u30dc\u30fc\u30ca\u30b9\u80fd\u529b\u306e\u5024\u304c\u8a2d\u5b9a\u3055\u308c\u3066\u3044\u307e\u305b\u3093 [\u8a2d\u5b9a\u9593\u9055\u3044]",
-    "game": "nechro",
-    "data_id": 3255210,
-    "phrase": "f613e51fd2fb29b67c22215aee613749",
-    "data_title": "\u30be\u30f3\u30d3",
-    "save_limitate": "account",
-    "dodontof_send_to": "https://ddntf.museru.com/DodontoF/DodontoF.swf",
-    "dodontof_url": "",
-    "dodontof_room": "",
-    "koma_name": "",
-    "dodontof_image": "",
-    "dodontof_sc_colors": "",
-    "elysion": "",
-    "nechro": "",
-    "select2": "All",
-    "": ""
+    "kind": "character",
+    "data": {
+        "name": "",
+        "initiative": 8,
+        "externalUrl": "",
+        "memo": "----\u30ab\u30eb\u30de----\n\u8a18\u61b6\u306e\u30ab\u30b1\u30e9\u3092\u7372\u5f97\u3059\u308b\n\n\n----\u304d\u304a\u304f\u306e\u304b\u3051\u3089----\n\n",
+        "commands": "NM \u672a\u7df4\u5224\u5b9a\nchoice[PL1, PL2, PL3, PL4]\nchoice[\u8d64, \u9752, \u9ec4, \u7dd1, \u767d, \u9ed2]\n1NC \u884c\u52d5\u5224\u5b9a\n1NC+1 \u884c\u52d5\u5224\u5b9a\n1NC+2 \u884c\u52d5\u5224\u5b9a\n1NC+3 \u884c\u52d5\u5224\u5b9a\n1NC \u72c2\u6c17\u30fb\u5bfe\u8a71\u5224\u5b9a\n1NC+1 \u72c2\u6c17\u30fb\u5bfe\u8a71\u5224\u5b9a\n1NC+2 \u72c2\u6c17\u30fb\u5bfe\u8a71\u5224\u5b9a\n1NC+3 \u72c2\u6c17\u30fb\u5bfe\u8a71\u5224\u5b9a\n:\u72c2\u6c17\u6e1b\u5c11\u4e0a\u9650+1\n:\u72c2\u6c17\u6e1b\u5c11\u4e0a\u9650=0\n1NA\n1NA+1\n1NA+2\n1NA+3\n[None] \u3072\u304d\u3055\u304f:\u30a2\u30af\u30b7\u30e7\u30f3:\uff12:\uff10:\n[None] \u3088\u308d\u3081\u304f:\u30a2\u30af\u30b7\u30e7\u30f3:\uff13:\u81ea\u8eab:\n[None] \u3080\u3089\u304c\u308b:\u30e9\u30d4\u30c3\u30c9:\uff10:\uff10:\n",
+        "status": [
+            {
+                "label": "\u72c2\u6c17\u6e1b\u5c11\u4e0a\u9650",
+                "value": 0,
+                "max": 1
+            },
+            {
+                "label": "\u982d\u6b8b",
+                "value": 0,
+                "max": 0
+            },
+            {
+                "label": "\u8155\u6b8b",
+                "value": 0,
+                "max": 0
+            },
+            {
+                "label": "\u80f4\u6b8b",
+                "value": 0,
+                "max": 0
+            },
+            {
+                "label": "\u811a\u6b8b",
+                "value": 0,
+                "max": 0
+            },
+            {
+                "label": "PL1\u3078\u306e\u672a\u7df4",
+                "value": 3,
+                "max": 4
+            },
+            {
+                "label": "PL2\u3078\u306e\u672a\u7df4",
+                "value": 3,
+                "max": 4
+            },
+            {
+                "label": "PL3\u3078\u306e\u672a\u7df4",
+                "value": 3,
+                "max": 4
+            },
+            {
+                "label": "PL4\u3078\u306e\u672a\u7df4",
+                "value": 3,
+                "max": 4
+            }
+        ],
+        "params": [
+            {
+                "label": "\u30dd\u30b8\u30b7\u30e7\u30f3",
+                "value": ""
+            },
+            {
+                "label": "\u30e1\u30a4\u30f3\u30af\u30e9\u30b9",
+                "value": ""
+            },
+            {
+                "label": "\u30b5\u30d6\u30af\u30e9\u30b9",
+                "value": ""
+            },
+            {
+                "label": "\u6b66\u88c5",
+                "value": "0/9"
+            },
+            {
+                "label": "\u5909\u7570",
+                "value": "0/9"
+            },
+            {
+                "label": "\u6539\u9020",
+                "value": "0/9"
+            },
+            {
+                "label": "\u5bf5\u611b",
+                "value": "0"
+            },
+            {
+                "label": "\u4eab\u5e74",
+                "value": ""
+            },
+            {
+                "label": "\u6697\u793a",
+                "value": ""
+            },
+            {
+                "label": "\u3072\u304d\u3055\u304f",
+                "value": "\u4f7f\u7528\u53ef\u80fd"
+            },
+            {
+                "label": "\u3088\u308d\u3081\u304f",
+                "value": "\u4f7f\u7528\u53ef\u80fd"
+            },
+            {
+                "label": "\u3080\u3089\u304c\u308b",
+                "value": "\u4f7f\u7528\u53ef\u80fd"
+            }
+        ]
+    }
 }
