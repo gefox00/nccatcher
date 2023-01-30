@@ -6,14 +6,16 @@ from time import sleep
 import sqlite3
 import os
 import json
-# デバッグ用フラグ
-# このフラグは手動で切替て使うことにする
-debug_log = True
+
 # コンフィグ？
 config = {}
 if os.path.isfile('data_file/config.json'):
     with open('data_file/config.json', 'r', encoding='utf8')as r:
         config = json.load(r)
+        # デバッグ用フラグ
+        # このフラグは手動で切替て使うことにする
+        debug_log = config['debug']
+
 else:
     with open('data_file/config.json', 'w', encoding='utf8') as w:
         config['dbcheck'] = True
@@ -45,7 +47,7 @@ layout.append([Sg.Button('変換開始', size=38, key='bt_start'), Sg.Button('�
 # 各logにたいしてなにか操作する処理を無効にする
 if debug_log:
     # デバッグがオフの時はログをlayoutに追加
-    layout.append([Sg.Output(size=(78, 20), key='log')])
+    layout.append([Sg.Output(size=(88, 20), key='log')])
 else:
     # gefoxの作ったキャラシ
     pyperclip.copy("https://charasheet.vampire-blood.net/me58c7745269933f1080637f585dfa201")
@@ -99,8 +101,8 @@ while True:
                 row_count = cur.execute(f'SELECT COUNT(*) FROM character WHERE name = "{push_data[0]}"').fetchone()[0]
                 # GUIの情報とデータベースの情報から処理を分岐する
                 # データベースにデータを登録するかチェック
-                if window['chb'].get():
-                    config['dbcheck'] = window['chb'].get()
+                if window['chb_dbc'].get():
+                    config['dbcheck'] = window['chb_dbc'].get()
                     if int(row_count) > 0:
                         # データベース保存にチェックが入っていて同一キャラ名があったら重複検知をポップアップする
                         value = Sg.popup_ok_cancel('同一名のデータが存在します\nデータを更新しますか？',

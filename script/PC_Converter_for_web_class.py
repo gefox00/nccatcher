@@ -19,7 +19,7 @@ class Nccatcher:
         del_cur.execute('VACUUM')
         del_conn.close()
 
-    def __init__(self, data: {}, url: str, db_dir: str = 'data_file/my_char.db'):
+    def __init__(self, data: {}, url: str = '', db_dir: str = 'data_file/my_char.db'):
         self.conv(data, url)
 
     # 処理本体
