@@ -7,8 +7,15 @@ import sqlite3
 import os
 import json
 
+
+
+
 # コンフィグ？
 config = {}
+# 表示用ヘッダ
+log_header = {'name': '名前', 'initiative': '最大行動値', 'externalUrl': '参照URL', 'memo': 'キャラクターメモ',
+              'commands': 'チャットパレット', 'status': 'ステータス', 'params': 'パラメータ'}
+_data = ''
 if os.path.isfile('data_file/config.json'):
     with open('data_file/config.json', 'r', encoding='utf8')as r:
         config = json.load(r)
@@ -38,16 +45,15 @@ cur.execute('CREATE TABLE IF NOT EXISTS rule(name STRING)')
 # ねんのためコミット
 conn.commit()
 # ウィンドウに配置するコンポーネント設定
-layout = [[Sg.Text('URLを張り付けてください'), Sg.Input(default_text=config['URL'], size=(64, 1), key='tb_open')]]
-
-layout.append([Sg.Checkbox('データベースに記憶する', key='chb_dbc', default=bool(config['dbcheck'])),
-               Sg.Checkbox('最後に変換したキャラを記憶する', key='chb_last', default=bool(config['lastchar']))])
-layout.append([Sg.Button('変換開始', size=38, key='bt_start'), Sg.Button('クリップボードにコピー', size=38, key='bt_copy')])
+layout = [[Sg.Text('URLを張り付けてください'), Sg.Input(default_text=config['URL'], size=(64, 1), key='tb_open')],
+          [Sg.Checkbox('データベースに記憶する', key='chb_dbc', default=bool(config['dbcheck'])),
+           Sg.Checkbox('最後に変換したキャラを記憶する', key='chb_last', default=bool(config['lastchar']))],
+          [Sg.Button('変換開始', size=38, key='bt_start'), Sg.Button('クリップボードにコピー', size=38, key='bt_copy')]]
 # デバッグ機能デバッグフラグがTrueになってるときはGUIのlogを非表示にして
 # 各logにたいしてなにか操作する処理を無効にする
 if debug_log:
     # デバッグがオフの時はログをlayoutに追加
-    layout.append([Sg.Output(size=(88, 20), key='log')])
+    layout.append([Sg.MLine(size=(88, 20), key='log')])
 else:
     # gefoxの作ったキャラシ
     pyperclip.copy("https://charasheet.vampire-blood.net/me58c7745269933f1080637f585dfa201")
@@ -87,10 +93,22 @@ while True:
                 # キャラシ変換オブジェクトをインスタンス化してデータを処理する
                 get_json = Nccatcher(data=data.json(), url=window['tb_open'].get())
                 # 変換結果をクリップボードへコピーする
-                pyperclip.copy(get_json.ch_data)
+                _data = get_json.ch_data
+                pyperclip.copy(_data)
+
                 # 変換結果をGUIに反映
                 if debug_log:
-                    window['log'].update(get_json.ch_data)
+                    log_data = ""
+                    for i in get_json.ch_data_js['data']:
+                        # GUIの表示領域にこれ以上データ量増やす必要ある？
+                        # if i == 'status':
+                        #     for j in get_json.ch_data_js["data"]['status']:
+                        #         log_data += f'{j} : {get_json.ch_data_js["data"]["status"][j]}\n'
+                        # if i == 'params':
+                        #     for j in get_json.ch_data_js["data"]['params']:
+                        #         log_data += f'{j} : {get_json.ch_data_js["data"]["status"][j]}\n'
+                        log_data += f'{log_header[i]} : {get_json.ch_data_js["data"][i]}\n'
+                    window['log'].update(log_data)
                 # クリップボードに結果をコピーしたことをポップアップ
                 Sg.popup('変換結果をクリップボードにコピーしました', title='コピーしました', no_titlebar=True)
                 # 変換したデータをデータベースにインサート
@@ -133,11 +151,11 @@ while True:
         if len(window['log'].get()) > 0:
             # GUIのログボックスに表示してる内容をclipboardにコピーする
             if debug_log:
-                pyperclip.copy(window['log'].get())
+                pyperclip.copy(_data)
             else:
                 pyperclip.copy('')
             # クリップボードにログボックスの中身をコピーしたことをポップアップ
-            Sg.popup('クリップボードにコピーしました', title='コピーしました', no_titlebar=True)
+            Sg.popup('変換結果をクリップボードにコピーしました', title='コピーしました', no_titlebar=True)
         else:
             # urlの入力なしにボタンを押下した場合は警告表示する
             # 他に処理はしない
@@ -146,7 +164,10 @@ while True:
 with open('data_file/config.json', 'w', encoding='utf8')as w:
     config['dbcheck'] = window['chb_dbc'].get()
     config['lastchar'] = window['chb_last'].get()
-    config['URL'] = window['tb_open'].get()
+    if window['chb_last'].get():
+        config['URL'] = window['tb_open'].get()
+    else:
+        config['URL'] = ''
     json.dump(config, w, indent=4)
 # データベースの最終コミットと領域開放した後にデータベースを閉じる
 conn.commit()
