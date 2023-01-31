@@ -60,13 +60,15 @@ else:
 
 # ウィンドウタイトル設定
 window = Sg.Window(title='コンバーター', layout=layout)
-while True:
+end_flag = True
+while end_flag:
     # イベントハンドラ
     event, values = window.read()
     load_data = {}
     # ×ボタン押下時の動作
     if event == Sg.WIN_CLOSED:
         # ｘボタンはそのままプログラムの終了処理にする
+        end_flag = False
         break
         # ループを抜けるとGUIが終了する
     # 変換開始ボタン押下時の動作
