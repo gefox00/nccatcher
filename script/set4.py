@@ -1,11 +1,11 @@
 import glob
-import json
+import json_file
 import csv
 
 enmn = []
 for i in glob.glob('endata/*'):
     with open(i, 'r', encoding='utf8')as r:
-        data = json.load(r)
+        data = json_file.load(r)
         mn_data = {}
         if data.get('data_title') == 'バブルヘッド':
             for pn, ph, pt, pc, pr, pm in zip(data['Power_name'], data['Power_hantei'], data['Power_timing'],

@@ -1,12 +1,12 @@
 import glob
-import json
+import json_file
 from PC_Converter_for_web_class import Nccatcher
 from time import sleep
 
 
 for i in glob.glob(fr'D:\Desktop\nccatcher\endata\*.json'):
     with open(i, 'r', encoding='utf8')as r:
-        data = json.load(r)
+        data = json_file.load(r)
 
         data = Nccatcher(data=data).ch_data_js
         print(data)
@@ -17,4 +17,4 @@ for i in glob.glob(fr'D:\Desktop\nccatcher\endata\*.json'):
         else:
             name = i
         with open(name, 'w', encoding='utf8')as w:
-            json.dump(data, w, indent=4)
+            json_file.dump(data, w, indent=4)

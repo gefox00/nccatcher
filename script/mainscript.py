@@ -1,4 +1,4 @@
-import json
+import json_file
 import pyperclip
 
 
@@ -13,8 +13,8 @@ class nccatcher:
     def conv(self, jsdata: {}, ch_URL, clip: bool = True):
         data = jsdata
         # デバッグ用に残しておく
-        # with open('testdata.json','r',encoding='utf8')as r:
-        #     data = json.load(r)
+        # with open('testdata.json_file','r',encoding='utf8')as r:
+        #     data = json_file.load(r)
         # clipboardAPIの決まり文句
         out_data = {"kind": "character"}
         parts_data = []
@@ -36,8 +36,8 @@ class nccatcher:
         for i in data['kakera_name']:
             memo += i + '\n'
 
-        with open('data.json','r',encoding='utf8')as r:
-            much = json.load(r)
+        with open('data.json_file','r',encoding='utf8')as r:
+            much = json_file.load(r)
             for name, hantei, timing, cost, d_range in zip(data['Power_name'], data['Power_hantei'],
                                                            data['Power_timing'], data['Power_cost'],
                                                            data['Power_range']):

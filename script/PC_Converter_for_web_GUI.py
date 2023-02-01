@@ -5,20 +5,20 @@ from PC_Converter_for_web_class import Nccatcher
 from time import sleep
 import sqlite3
 import os
-import json
-
-
+import json_file
+import db
 
 
 # コンフィグ？
 config = {}
+db_use = db.NcDataBase()
 # 表示用ヘッダ
 log_header = {'name': '名前', 'initiative': '最大行動値', 'externalUrl': '参照URL', 'memo': 'キャラクターメモ',
               'commands': 'チャットパレット', 'status': 'ステータス', 'params': 'パラメータ'}
-_data = ''
+clip_data = ''
 if os.path.isfile('data_file/config.json'):
     with open('data_file/config.json', 'r', encoding='utf8')as r:
-        config = json.load(r)
+        config = json_file.load(r)
         # デバッグ用フラグ
         # このフラグは手動で切替て使うことにする
         debug_log = config['debug']
@@ -28,29 +28,15 @@ else:
         config['dbcheck'] = True
         config['lastchar'] = True
         config['URL'] = ''
-        json.dump(config, w)
-#　【メモ】 https: // charasheet.vampire - blood.net / list_nechro.html?name = % E3 % 81 % 82
+        json_file.dump(config, w)
+# 【メモ】 https: // charasheet.vampire - blood.net / list_nechro.html?name = % E3 % 81 % 82
 # データベース操作追加
 # コンバーターとコンバート履歴はGUIを分ける使いづらいと感じたら統合する
-# データベースをオープンしてテーブルをセットする
-dbname = 'data_file/my_char.db'
-
-conn = sqlite3.connect(dbname)
-cur = conn.cursor()
-# テーブルの存在をチェックしてテーブルが存在しないときは作成する
-cur.execute('CREATE TABLE IF NOT EXISTS character(name STRING, data STRING)')
-cur.execute('CREATE TABLE IF NOT EXISTS maneuver(name STRING, equip INTEGER, '
-            'timing INTEGER, cost INTEGER, range INTEGER, text STRING)')
-cur.execute('CREATE TABLE IF NOT EXISTS rule(name STRING)')
-# ねんのためコミット
-conn.commit()
 # ウィンドウに配置するコンポーネント設定
 layout = [[Sg.Text('URLを張り付けてください'), Sg.Input(default_text=config['URL'], size=(64, 1), key='tb_open')],
           [Sg.Checkbox('データベースに記憶する', key='chb_dbc', default=bool(config['dbcheck'])),
            Sg.Checkbox('最後に変換したキャラを記憶する', key='chb_last', default=bool(config['lastchar']))],
           [Sg.Button('変換開始', size=38, key='bt_start'), Sg.Button('クリップボードにコピー', size=38, key='bt_copy')]]
-# デバッグ機能デバッグフラグがTrueになってるときはGUIのlogを非表示にして
-# 各logにたいしてなにか操作する処理を無効にする
 if debug_log:
     # デバッグがオフの時はログをlayoutに追加
     layout.append([Sg.MLine(size=(88, 20), key='log')])
@@ -95,20 +81,13 @@ while end_flag:
                 # キャラシ変換オブジェクトをインスタンス化してデータを処理する
                 get_json = Nccatcher(data=data.json(), url=window['tb_open'].get())
                 # 変換結果をクリップボードへコピーする
-                _data = get_json.ch_data
-                pyperclip.copy(_data)
+                clip_data = get_json.ch_data
+                pyperclip.copy(clip_data)
 
                 # 変換結果をGUIに反映
                 if debug_log:
                     log_data = ""
                     for i in get_json.ch_data_js['data']:
-                        # GUIの表示領域にこれ以上データ量増やす必要ある？
-                        # if i == 'status':
-                        #     for j in get_json.ch_data_js["data"]['status']:
-                        #         log_data += f'{j} : {get_json.ch_data_js["data"]["status"][j]}\n'
-                        # if i == 'params':
-                        #     for j in get_json.ch_data_js["data"]['params']:
-                        #         log_data += f'{j} : {get_json.ch_data_js["data"]["status"][j]}\n'
                         log_data += f'{log_header[i]} : {get_json.ch_data_js["data"][i]}\n'
                     window['log'].update(log_data)
                 # クリップボードに結果をコピーしたことをポップアップ
@@ -118,7 +97,7 @@ while end_flag:
                 # テーブルにインサートするデータを作成
                 push_data = [get_json.ch_data_js['data']['name'], get_json.ch_data]
                 # テーブルにインサートするデータと一致するデータがあるか検索して結果を格納
-                row_count = cur.execute(f'SELECT COUNT(*) FROM character WHERE name = "{push_data[0]}"').fetchone()[0]
+                row_count = db_use.check_tbl_character_rows(push_data[0])
                 # GUIの情報とデータベースの情報から処理を分岐する
                 # データベースにデータを登録するかチェック
                 if window['chb_dbc'].get():
@@ -130,20 +109,16 @@ while end_flag:
                                                    no_titlebar=True)
                         # データの更新意思を確認
                         if value == 'OK':
-                            cur.execute(f'UPDATE character '
-                                        f'SET data = \'{str(push_data[1])}\''
-                                        f'WHERE character.name = "{push_data[0]}"')
-                            conn.commit()
+                            db_use.coco_ch_update(push_data)
                     else:
                         # 同一データが存在しないのでデータをインサートする
-                        cur.execute(f'INSERT INTO character(name, data) '
-                                    f'VALUES("{push_data[0]}", \'{str(push_data[1])}\')')
-                        conn.commit()
+                        db_use.coco_ch_insert(push_data)
             else:
                 Sg.popup_error('対応できないURLが指定されました',
                                title='error',
                                no_titlebar=True)
             # ボタンを連打してサーバー攻撃しないように1秒待機
+            # 一応API自体は平均1秒6リクエストくらい処理できるっぽい（実測）
             sleep(1)
 
     # クリップボードにコピーボタン押下処理
@@ -151,9 +126,9 @@ while end_flag:
         if not debug_log:
             continue
         if len(window['log'].get()) > 0:
-            # GUIのログボックスに表示してる内容をclipboardにコピーする
+            # 変換したキャラシをclipboardにコピーする
             if debug_log:
-                pyperclip.copy(_data)
+                pyperclip.copy(clip_data)
             else:
                 pyperclip.copy('')
             # クリップボードにログボックスの中身をコピーしたことをポップアップ
@@ -170,8 +145,6 @@ with open('data_file/config.json', 'w', encoding='utf8')as w:
         config['URL'] = window['tb_open'].get()
     else:
         config['URL'] = ''
-    json.dump(config, w, indent=4)
-# データベースの最終コミットと領域開放した後にデータベースを閉じる
-conn.commit()
-cur.execute('VACUUM')
-conn.close()
+    json_file.dump(config, w, indent=4)
+# dbクラスを破棄
+del db_use

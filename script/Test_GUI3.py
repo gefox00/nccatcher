@@ -1,5 +1,5 @@
 import PySimpleGUI as Sg
-import json
+import json_file
 import os
 from time import sleep
 import csv
@@ -7,8 +7,8 @@ import csv
 data = ''
 header = ['マニューバ名', '装備箇所', 'タイミング', 'コスト', '射程', 'テキスト', 'カテゴリ']
 GUI = ['name', 'point', 'timing', 'cost', 'range', 'tb_txt2', 'category']
-with open('database.json','r', encoding='utf8')as r:
-    data = json.loads(r.read())
+with open('database.json_file','r', encoding='utf8')as r:
+    data = json_file.loads(r.read())
 
 # ウィンドウに配置するコンポーネント設定
 layout = [
@@ -32,8 +32,8 @@ while True:
         break
 
     if event == 'bt_search':
-        with open('database.json', 'r', encoding='utf8') as r:
-            data = json.loads(r.read())
+        with open('database.json_file', 'r', encoding='utf8') as r:
+            data = json_file.loads(r.read())
         searchword = window['bt_name'].get()
         target = data.get(searchword)
         if not target == None:
@@ -48,7 +48,7 @@ while True:
             push_data[h] = window[g].get()
         data[window['name'].get()] = {}
         data[window['name'].get()] = push_data
-        with open('database.json', 'w', encoding='utf8')as w:
-            json.dump(data, w)
+        with open('database.json_file', 'w', encoding='utf8')as w:
+            json_file.dump(data, w)
 
 

@@ -3,7 +3,7 @@ from requests import get
 from bs4 import BeautifulSoup as Bs
 from time import sleep
 import  os
-import json
+import json_file
 
 class DataSearch:
     out_data = {}
@@ -38,7 +38,7 @@ for g in get_data:
             print(i)
             with open('endata/'+os.path.basename(i)+'on', 'w', encoding='utf8')as w:
                 res = requests.get(i).json()
-                json.dump(res, w, indent=4)
+                json_file.dump(res, w, indent=4)
             sleep(1)
     except KeyError:
         pass

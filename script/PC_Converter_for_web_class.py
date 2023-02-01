@@ -1,4 +1,4 @@
-import json
+import json_file
 import sqlite3
 from time import sleep
 
@@ -72,7 +72,7 @@ class Nccatcher:
 
         # マニューバデータベースの読込と出力データ作成
         with open('data_file/data.json', 'r', encoding='utf8')as r:
-            much = json.load(r)
+            much = json_file.load(r)
             # マニューバデータの作成
             # Jsonからマニューバを読み込んでチャパレ用に成形する
             for name, hantei, timing, cost, d_range, memo in zip(data['Power_name'], data['Power_hantei'],

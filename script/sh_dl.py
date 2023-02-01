@@ -1,8 +1,4 @@
-from bs4 import BeautifulSoup as Bs4
-import requests
 import PySimpleGUI as Sg
-import json
-from time import sleep
 
 
 category_data = {'タイトル': '?title=', 'タグ': '?tag=', '名前': '?name='}
@@ -12,8 +8,12 @@ layout = [[Sg.Text('検索ワードを入力し検索データカテゴリを選
           [Sg.Input(size=60),
            Sg.Combo(list(category_data.keys()), size=8, default_value='名前', key='category')
            ],
-          [Sg.Combo([], size=70, default_value='', key='category')],
+
           [Sg.Button(button_text='実行', size=62, key='bt_start')],
+          [Sg.Text(text='検索結果')],
+          [Sg.Text(text='ヒットしたデータ')],
+          [Sg.Combo(values=['a', 'b'], size=70, default_value='', key='select')],
+          [Sg.Text(text='データ内容')],
           [Sg.MLine(size=(70, 10), key='tb_out')]]
 
 window = Sg.Window(layout=layout, title=' ')
@@ -26,6 +26,8 @@ while end_window:
         break
 
     if event == 'bt_start':
+        window['select'].Update(values=['c', 'd'])
+        window['select'].Update(value='d')
         print('get')
 
 for i in range(10):

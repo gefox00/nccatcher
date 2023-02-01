@@ -1,5 +1,5 @@
 import csv
-import json
+import json_file
 
 
 outjson = {}
@@ -22,5 +22,5 @@ with open('data.csv', 'r', encoding='utf8')as r:
         dataline = {}
 for i in outjson:
     print(i, outjson[i])
-with open('database.json', 'w', encoding='utf8')as w:
-    json.dump(outjson, w, indent=4)
+with open('database.json_file', 'w', encoding='utf8')as w:
+    json_file.dump(outjson, w, indent=4)

@@ -1,5 +1,5 @@
 import requests
-import json
+import json_file
 from bs4 import BeautifulSoup as bs
 from time import sleep
 
@@ -18,7 +18,7 @@ for l in soup.select('a[href]'):
         ch_data_tx.append(requests.get(temp).text)
         sleep(1)
 for i in ch_data_tx:
-    ch_data_js.append(json.loads(i))
+    ch_data_js.append(json_file.loads(i))
 for i in ch_data_js:
     for j in i:
         print(j)

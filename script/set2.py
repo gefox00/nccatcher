@@ -1,4 +1,4 @@
-import json
+import json_file
 
 color_map = {
 'alice blue': '#F0F8FF', 'AliceBlue': '#F0F8FF', 'antique white': '#FAEBD7', 'AntiqueWhite': '#FAEBD7',
