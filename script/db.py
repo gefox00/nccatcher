@@ -25,7 +25,13 @@ class NcDataBase:
         self.cur.execute('CREATE TABLE IF NOT EXISTS '
                          'maneuver(name STRING, equip INTEGER, timing INTEGER, '
                          'cost INTEGER, range STRING, text STRING)')
+        self.cur.execute('CREATE TABLE IF NOT EXISTS '
+                         'original_sheet(id STRING, name STRING, json STRING)')
         self.conn.commit()
+
+    def original_data_insert(self, push_data:[]):
+        self.cur.execute(f'INSERT INTO original_sheet(id, name, json) '
+                         f'VALUES("{push_data[0]}", \'{str(push_data[1])}\')')
 
     def check_tbl_character_rows(self, data_name: ''):
         back = self.cur.execute(f'SELECT COUNT(*) FROM character WHERE name = "{data_name}"').fetchone()
@@ -46,4 +52,3 @@ class NcDataBase:
         self.cur.execute(f'INSERT INTO character(name, data) '
                          f'VALUES("{insert_data[0]}", \'{str(insert_data[1])}\')')
         self.conn.commit()
-

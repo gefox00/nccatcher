@@ -3,9 +3,8 @@ import requests
 import pyperclip
 from PC_Converter_for_web_class import Nccatcher
 from time import sleep
-import sqlite3
 import os
-import json_file
+import json
 import db
 
 
@@ -18,7 +17,7 @@ log_header = {'name': '名前', 'initiative': '最大行動値', 'externalUrl': 
 clip_data = ''
 if os.path.isfile('data_file/config.json'):
     with open('data_file/config.json', 'r', encoding='utf8')as r:
-        config = json_file.load(r)
+        config = json.load(r)
         # デバッグ用フラグ
         # このフラグは手動で切替て使うことにする
         debug_log = config['debug']
@@ -28,7 +27,7 @@ else:
         config['dbcheck'] = True
         config['lastchar'] = True
         config['URL'] = ''
-        json_file.dump(config, w)
+        json.dump(config, w)
 # 【メモ】 https: // charasheet.vampire - blood.net / list_nechro.html?name = % E3 % 81 % 82
 # データベース操作追加
 # コンバーターとコンバート履歴はGUIを分ける使いづらいと感じたら統合する
@@ -52,91 +51,92 @@ while end_flag:
     event, values = window.read()
     load_data = {}
     # ×ボタン押下時の動作
-    if event == Sg.WIN_CLOSED:
-        # ｘボタンはそのままプログラムの終了処理にする
-        end_flag = False
-        break
+    match event:
+        case Sg.WIN_CLOSED:
+            # ｘボタンはそのままプログラムの終了処理にする
+            end_flag = False
+            break
         # ループを抜けるとGUIが終了する
     # 変換開始ボタン押下時の動作
-    if event == 'bt_start':
-        # ブランクとキャラシ保管所以外のURLは無視する
-        if len(window['tb_open'].get()) > 0 and 'charasheet.vampire-blood.net' in window['tb_open'].get():
-            if debug_log:
-                window['log'].update('')
-            # APIを叩いてJson取得
-            target = window['tb_open'].get() + '.js'
-            data = requests.get(target)
-            # 非対応チェック
-            # 変換できないデータレスポンスを受け取ってないかチェックと対処法をポップアップ
-            if '<!DOCTYPE html>' in str(data.content):
-                Sg.popup_error('対応できないURLが指定されました\n'
-                               'URL末尾に「#top」がついている場合は「#top」を消して変換を実行してください',
-                               title='error',
-                               no_titlebar=True)
-                continue
-            # 処理可能なデータか中身を確認する
-            # URLからなんのタイトルのキャラシか分からないためデータを取得して確かめる
-            title = data.json()
-            if data.status_code == requests.codes.ok and title['game'] == 'nechro':
-                # キャラシ変換オブジェクトをインスタンス化してデータを処理する
-                get_json = Nccatcher(data=data.json(), url=window['tb_open'].get())
-                # 変換結果をクリップボードへコピーする
-                clip_data = get_json.ch_data
-                pyperclip.copy(clip_data)
-
-                # 変換結果をGUIに反映
+        case 'bt_start':
+            # ブランクとキャラシ保管所以外のURLは無視する
+            if len(window['tb_open'].get()) > 0 and 'charasheet.vampire-blood.net' in window['tb_open'].get():
                 if debug_log:
-                    log_data = ""
-                    for i in get_json.ch_data_js['data']:
-                        log_data += f'{log_header[i]} : {get_json.ch_data_js["data"][i]}\n'
-                    window['log'].update(log_data)
-                # クリップボードに結果をコピーしたことをポップアップ
-                Sg.popup('変換結果をクリップボードにコピーしました', title='コピーしました', no_titlebar=True)
-                # 変換したデータをデータベースにインサート
-                # ただし同一キャラ名のキャラはのぞく
-                # テーブルにインサートするデータを作成
-                push_data = [get_json.ch_data_js['data']['name'], get_json.ch_data]
-                # テーブルにインサートするデータと一致するデータがあるか検索して結果を格納
-                row_count = db_use.check_tbl_character_rows(push_data[0])
-                # GUIの情報とデータベースの情報から処理を分岐する
-                # データベースにデータを登録するかチェック
-                if window['chb_dbc'].get():
-                    config['dbcheck'] = window['chb_dbc'].get()
-                    if int(row_count) > 0:
-                        # データベース保存にチェックが入っていて同一キャラ名があったら重複検知をポップアップする
-                        value = Sg.popup_ok_cancel('同一名のデータが存在します\nデータを更新しますか？',
-                                                   title='重複検知',
-                                                   no_titlebar=True)
-                        # データの更新意思を確認
-                        if value == 'OK':
-                            db_use.coco_ch_update(push_data)
-                    else:
-                        # 同一データが存在しないのでデータをインサートする
-                        db_use.coco_ch_insert(push_data)
-            else:
-                Sg.popup_error('対応できないURLが指定されました',
-                               title='error',
-                               no_titlebar=True)
-            # ボタンを連打してサーバー攻撃しないように1秒待機
-            # 一応API自体は平均1秒6リクエストくらい処理できるっぽい（実測）
-            sleep(1)
+                    window['log'].update('')
+                # APIを叩いてJson取得
+                target = window['tb_open'].get() + '.js'
+                data = requests.get(target)
+                # 非対応チェック
+                # 変換できないデータレスポンスを受け取ってないかチェックと対処法をポップアップ
+                if '<!DOCTYPE html>' in str(data.content):
+                    Sg.popup_error('対応できないURLが指定されました\n'
+                                   'URL末尾に「#top」がついている場合は「#top」を消して変換を実行してください',
+                                   title='error',
+                                   no_titlebar=True)
+                    continue
+                # 処理可能なデータか中身を確認する
+                # URLからなんのタイトルのキャラシか分からないためデータを取得して確かめる
+                title = data.json()
+                if data.status_code == requests.codes.ok and title['game'] == 'nechro':
+                    # キャラシ変換オブジェクトをインスタンス化してデータを処理する
+                    get_json = Nccatcher(data=data.json(), url=window['tb_open'].get())
+                    # 変換結果をクリップボードへコピーする
+                    clip_data = get_json.ch_data
+                    pyperclip.copy(clip_data)
+
+                    # 変換結果をGUIに反映
+                    if debug_log:
+                        log_data = ""
+                        for i in get_json.ch_data_js['data']:
+                            log_data += f'{log_header[i]} : {get_json.ch_data_js["data"][i]}\n'
+                        window['log'].update(log_data)
+                    # クリップボードに結果をコピーしたことをポップアップ
+                    Sg.popup('変換結果をクリップボードにコピーしました', title='コピーしました', no_titlebar=True)
+                    # 変換したデータをデータベースにインサート
+                    # ただし同一キャラ名のキャラはのぞく
+                    # テーブルにインサートするデータを作成
+                    push_data = [get_json.ch_data_js['data']['name'], get_json.ch_data]
+                    # テーブルにインサートするデータと一致するデータがあるか検索して結果を格納
+                    row_count = db_use.check_tbl_character_rows(push_data[0])
+                    # GUIの情報とデータベースの情報から処理を分岐する
+                    # データベースにデータを登録するかチェック
+                    if window['chb_dbc'].get():
+                        config['dbcheck'] = window['chb_dbc'].get()
+                        if int(row_count) > 0:
+                            # データベース保存にチェックが入っていて同一キャラ名があったら重複検知をポップアップする
+                            value = Sg.popup_ok_cancel('同一名のデータが存在します\nデータを更新しますか？',
+                                                       title='重複検知',
+                                                       no_titlebar=True)
+                            # データの更新意思を確認
+                            if value == 'OK':
+                                db_use.coco_ch_update(push_data)
+                        else:
+                            # 同一データが存在しないのでデータをインサートする
+                            db_use.coco_ch_insert(push_data)
+                else:
+                    Sg.popup_error('対応できないURLが指定されました',
+                                   title='error',
+                                   no_titlebar=True)
+                # ボタンを連打してサーバー攻撃しないように1秒待機
+                # 一応API自体は平均1秒6リクエストくらい処理できるっぽい（実測）
+                sleep(1)
 
     # クリップボードにコピーボタン押下処理
-    if event == 'bt_copy':
-        if not debug_log:
-            continue
-        if len(window['log'].get()) > 0:
-            # 変換したキャラシをclipboardにコピーする
-            if debug_log:
-                pyperclip.copy(clip_data)
+        case 'bt_copy':
+            if not debug_log:
+                continue
+            if len(window['log'].get()) > 0:
+                # 変換したキャラシをclipboardにコピーする
+                if debug_log:
+                    pyperclip.copy(clip_data)
+                else:
+                    pyperclip.copy('')
+                # クリップボードにログボックスの中身をコピーしたことをポップアップ
+                Sg.popup('変換結果をクリップボードにコピーしました', title='コピーしました', no_titlebar=True)
             else:
-                pyperclip.copy('')
-            # クリップボードにログボックスの中身をコピーしたことをポップアップ
-            Sg.popup('変換結果をクリップボードにコピーしました', title='コピーしました', no_titlebar=True)
-        else:
-            # urlの入力なしにボタンを押下した場合は警告表示する
-            # 他に処理はしない
-            Sg.popup_error('コピーすべきデータがありません', title='error', no_titlebar=True)
+                # urlの入力なしにボタンを押下した場合は警告表示する
+                # 他に処理はしない
+                Sg.popup_error('コピーすべきデータがありません', title='error', no_titlebar=True)
 # GUIの情報をJsonに保存
 with open('data_file/config.json', 'w', encoding='utf8')as w:
     config['dbcheck'] = window['chb_dbc'].get()
@@ -145,6 +145,6 @@ with open('data_file/config.json', 'w', encoding='utf8')as w:
         config['URL'] = window['tb_open'].get()
     else:
         config['URL'] = ''
-    json_file.dump(config, w, indent=4)
+    json.dump(config, w, indent=4)
 # dbクラスを破棄
 del db_use

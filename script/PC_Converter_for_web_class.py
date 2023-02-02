@@ -1,31 +1,12 @@
-import json_file
-import sqlite3
-from time import sleep
+import json
 
 
 class Nccatcher:
+    ch_data = ''
+    ch_data_js = ''
+
     # 変換結果を格納
-    ch_data = ""
-    ch_data_js = {}
-
-    dbname = 'data_file/my_char.db'
-    conn = sqlite3.connect(dbname)
-    cur = conn.cursor()
-    # ???デストラクタでエラー出たぞ???
-    # def __del__(self):
-    #     self.dispose(self.conn, self.cur)
-    #
-    # def dispose(self, del_conn, del_cur):
-    #     del_conn.commit()
-    #     del_cur.execute('VACUUM')
-    #     del_conn.close()
-    #     sleep(1)
-    #
-    # def close(self):
-    #     self.cur.close()
-    #     self.conn.close()
-
-    def __init__(self, data: {}, url: str = '', db_dir: str = 'data_file/my_char.db'):
+    def __init__(self, data: {}, url: str = ''):
         self.conv(data, url)
 
     # 処理本体
@@ -54,7 +35,7 @@ class Nccatcher:
 
         # 挿入用データセット
         partdata = {0: 'None', 1: 'ポジション', 2: 'メインクラス', 3: 'サブクラス', 4: '頭', 5: '腕', 6: '胴', 7: '足'}
-        timingdata = {0: 'オート', 1: 'アクション', 4: 'ラピッド', 2: 'ジャッジ', 3: 'ダメージ'}
+        timingdata = {0: 'Au', 1: 'Ac', 4: 'Ra', 2: 'Ju', 3: 'Da'}
 
         # チャットパレットの提携挿入コマンドを読込
         with open('data_file/cmdtxt.txt', 'r', encoding='utf8')as r:
@@ -72,25 +53,19 @@ class Nccatcher:
 
         # マニューバデータベースの読込と出力データ作成
         with open('data_file/data.json', 'r', encoding='utf8')as r:
-            much = json_file.load(r)
+            much = json.load(r)
             # マニューバデータの作成
             # Jsonからマニューバを読み込んでチャパレ用に成形する
+            # 各部位のアイテム数をカウント
+            eq_h = sum(x == str(4) for x in data['Power_hantei'])
+            eq_a = sum(x == str(5) for x in data['Power_hantei'])
+            eq_b = sum(x == str(6) for x in data['Power_hantei'])
+            eq_l = sum(x == str(7) for x in data['Power_hantei'])
             for name, hantei, timing, cost, d_range, memo in zip(data['Power_name'], data['Power_hantei'],
                                                                  data['Power_timing'], data['Power_cost'],
                                                                  data['Power_range'], data['Power_memo']):
-                # 各部位のアイテム数をカウント
-                match int(hantei):
-                    case 4:
-                        eq_h += 1
-                    case 5:
-                        eq_a += 1
-                    case 6:
-                        eq_b += 1
-                    case 7:
-                        eq_l += 1
                 # 辞書型の仕様を利用してマニューバの名前でdata.jsonから検索してテキストをマッチング
                 try:
-
 
                     # 例外のおきようなくね？
                     # 今後修正検討箇所
@@ -102,13 +77,12 @@ class Nccatcher:
                             insert = much[m]
                     # マッチした場合はマニューバデータにテキストを差し込み
                     parts_data.append(f'[{partdata[int(hantei)]}] '
-                                      f'{name}:'
-                                      f'{timingdata[int(timing)]}:'
+                                      f'{name}'
+                                      f'《{timingdata[int(timing)]}:'
                                       f'{cost}:'
-                                      f'{d_range}:'
+                                      f'{d_range}》'
                                       f'{insert}')
                     # この処理自体例外の出しようがないので下記のエグゼプトは実行されない気がする
-                    #
                 except KeyError:
                     # マッチしなければ大元のデータを引用する
                     # 例外のおきようがない気がするのでこの処理は必要ない気がする
