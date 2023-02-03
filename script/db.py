@@ -1,18 +1,22 @@
 import sqlite3
 
 
+# このクラスではデータベースのクエリと一定操作をまとめて記述する
 class NcDataBase:
     dbname = 'data_file/my_char.db'
     conn = sqlite3.connect(dbname)
     cur = conn.cursor()
+    # DBがオープンされていることを通知
     print('db open')
 
     def __init__(self):
         self.table_set()
 
     def __del__(self):
+        # デストラクタでコネクションとカーソルを破棄とvacuumを実行してDBの最適化をする
         print('DB closing')
         self.cur.execute('VACUUM')
+        self.conn.commit()
         self.cur.close()
         self.conn.close()
         print('DB close complete')
