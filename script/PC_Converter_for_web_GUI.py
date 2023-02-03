@@ -80,6 +80,16 @@ while end_flag:
                 if data.status_code == requests.codes.ok and title['game'] == 'nechro':
                     # キャラシ変換オブジェクトをインスタンス化してデータを処理する
                     get_json = Nccatcher(data=data.json(), url=window['tb_open'].get())
+
+                    str_title = str(title).replace("'", '')
+
+                    db_use.original_data_insert({'md': title['phrase'], 'id': title['data_id'],
+                                                 'name': title['data_title'], 'json': str_title})
+                    upd = {'id': title['data_id'],
+                           'md': title['phrase'],
+                           'name': title['data_title'],
+                           'json': str_title}
+                    db_use.original_data_update(upd)
                     # 変換結果をクリップボードへコピーする
                     clip_data = get_json.ch_data
                     pyperclip.copy(clip_data)

@@ -19,3 +19,16 @@ layout = [
              Sg.Button('クリップボードにコピー', size=37, key='bt_copy')]
             # 変換結果表示用テキストボックスの配置
          ]
+window = Sg.Window(title='', layout=layout)
+
+end_flag = True
+while end_flag:
+    event, value = window.read()
+    match event:
+        case Sg.WIN_CLOSED:
+            end_flag = False
+        case '':
+            pass
+        case _:
+            break
+

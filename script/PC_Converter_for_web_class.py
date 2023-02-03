@@ -25,10 +25,10 @@ class Nccatcher:
         parts_sysdata = []
 
         # 部位のアイテムカウント用変数定義
-        eq_h = 0
-        eq_a = 0
-        eq_b = 0
-        eq_l = 0
+        eq_h = sum(x == str(4) for x in data['Power_hantei'])
+        eq_a = sum(x == str(5) for x in data['Power_hantei'])
+        eq_b = sum(x == str(6) for x in data['Power_hantei'])
+        eq_l = sum(x == str(7) for x in data['Power_hantei'])
 
         # メモ設定用変数定義
         sys_memo = '----カルマ----\n'
@@ -57,10 +57,7 @@ class Nccatcher:
             # マニューバデータの作成
             # Jsonからマニューバを読み込んでチャパレ用に成形する
             # 各部位のアイテム数をカウント
-            eq_h = sum(x == str(4) for x in data['Power_hantei'])
-            eq_a = sum(x == str(5) for x in data['Power_hantei'])
-            eq_b = sum(x == str(6) for x in data['Power_hantei'])
-            eq_l = sum(x == str(7) for x in data['Power_hantei'])
+
             for name, hantei, timing, cost, d_range, memo in zip(data['Power_name'], data['Power_hantei'],
                                                                  data['Power_timing'], data['Power_cost'],
                                                                  data['Power_range'], data['Power_memo']):
@@ -103,13 +100,16 @@ class Nccatcher:
                 if partdata[i] in j:
                     temp.append(j)
         parts_data = temp
+        # ステータスデータを作成
         cocost_data = [{'label': '狂気減少上限', 'value': 0, 'max': len(data['kakera_name'])},
                        {'label': '頭残', 'value': eq_h, 'max': eq_h},
                        {'label': '腕残', 'value': eq_a, 'max': eq_a},
                        {'label': '胴残', 'value': eq_b, 'max': eq_b},
                        {'label': '脚残', 'value': eq_l, 'max': eq_l}]
+        # キャラシの未練を読み込んでステータスに変換
         for i in range(4):
             cocost_data.append({'label': f'PL{i+1}への未練', 'value': 3, 'max': 4})
+        # 装備マニューバやセッション内で変わることがほぼないデータをパラメータに設定
         cocopa_data = [{'label': 'ポジション', 'value': data['Position_Name']},
                        {'label': 'メインクラス', 'value': data['MCLS_Name']},
                        {'label': 'サブクラス', 'value': data['SCLS_Name']},
@@ -120,16 +120,20 @@ class Nccatcher:
                        {'label': '享年', 'value': data['age']},
                        {'label': '暗示', 'value': data['pc_carma']}
                        ]
+        # パラメータにマニューバを設定
         for i in parts_sysdata:
             # print(i)
             cocopa_data.append({'label': i[0], 'value': '使用可能'})
+        # マニューバをチャットパレットに挿入
         for i in parts_data:
             command += i + '\n'
-
+        # クリップボードAPIで読込めるデータに整形
         temp = {'name': data['pc_name'], 'initiative': int(data['Act_Total']),
                 'externalUrl': str(ch_url), 'memo': sys_memo, 'commands': command,
                 'status': cocost_data, 'params': cocopa_data}
+        # 最終形態
         out_data['data'] = temp
-        # 変換したデータをオブジェクトで保持
+        # クリップボードAPIの仕様に合わせてここまでで作成したデータを辞書オブジェクトから文字列に変換
         self.ch_data = str(out_data).replace('\'', '"')
+        # 他のプログラムでデータを再利用するため辞書型も別途保持
         self.ch_data_js = out_data

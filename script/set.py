@@ -1,26 +1,12 @@
 import csv
-import json_file
+import sqlite3
+import db
+import requests
+db = db.NcDataBase()
+res = requests.get("https://charasheet.vampire-blood.net/me58c7745269933f1080637f585dfa201.js").json()
+data = str(res.keys()).replace('[', '(').replace(']', ' STRING)')[10:-1].replace("'","").replace(","," STRING,")
+print(data)
+
+db.conn.commit()
 
 
-outjson = {}
-dataline = {}
-header = ['マニューバ名', '装備箇所', 'タイミング', 'コスト', '射程', 'テキスト', 'カテゴリ']
-
-with open('data.csv', 'r', encoding='utf8')as r:
-    data = csv.reader(r)
-    for i in data:
-        if len(i[1]) == 0:
-            temp = i
-            temp[1] = 'スキル'
-            for na, da in zip(header, temp):
-                dataline[na] = da
-            # 0-6
-        else:
-            for na, da in zip(header, i):
-                dataline[na] = da
-        outjson[i[0]] = dataline
-        dataline = {}
-for i in outjson:
-    print(i, outjson[i])
-with open('database.json_file', 'w', encoding='utf8')as w:
-    json_file.dump(outjson, w, indent=4)
