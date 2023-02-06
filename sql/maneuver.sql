@@ -1,0 +1,1 @@
+CREATE TABLE maneuver(name STRING, equip STRING, timing STRING, cost STRING, range STRING, text STRING, category STRING)

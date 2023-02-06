@@ -1,34 +1,36 @@
 import requests
 from PIL import Image
+import io
 import PySimpleGUI as sg
+import os
 
 
-get_fox = requests.get("https://randomfox.ca/floof/").json()
-get_fox_pic = requests.get(get_fox['image']).content
+def get_pic():
+    get_fox = requests.get("https://randomfox.ca/floof/").json()
+    a_img = Image.open(io.BytesIO(requests.get(get_fox['image']).content))
+    bio = io.BytesIO()
+    a_img.save(fp=bio, format='png')
+    return {'pic_io': bio.getvalue(), 'pic_url': get_fox['image']}
 
-fox = Image.frombytes(mode='RGBA', size=(100, 100), data=get_fox_pic)
-fox.show()
+
+sg.theme('DarkAmber')
+layout = [[sg.Button('show_pic', key='bush'), sg.Button('get_this_pic', key='buge', visible=False)],
+          [sg.Image(key='pic', size=(500, 500))]]
+
+window = sg.Window('サンプルプログラム', layout)
+urls = ''
+while True:
+    event, values = window.read()
+    if event == sg.WIN_CLOSED:
+        break
+    if event == 'bush':
+        get_data = get_pic()
+        window['pic'].update(get_data['pic_io'])
+        window['buge'].update(visible=True)
+        urls = get_data['pic_url']
+    if event == 'buge':
+        getpic = requests.get(urls)
+        result = sg.popup_get_file("ファイルを選択してください", file_types=(("jpeg画像", ".jpg"),))
 
 
-if False:
-    # ウィンドウのテーマ
-    sg.theme('DarkRed')
-
-    # ウィンドウのレイアウト
-    layout = [
-            [sg.Image(source=get_fox_pic)]
-        ]
-
-    # ウィンドウオブジェクトの作成
-    window = sg.Window('title', layout, size=(300, 300))
-
-    # イベントのループ
-    while True:
-        # イベントの読み込み
-        event, values = window.read()
-        # ウィンドウの×ボタンクリックで終了
-        if event == sg.WIN_CLOSED:
-            break
-
-    # ウィンドウ終了処理
-    window.close()
+window.close()

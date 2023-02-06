@@ -1,0 +1,1 @@
+CREATE TABLE base_character(title STRING, tag STRING, name STRING, data STRING)

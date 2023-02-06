@@ -1,0 +1,1 @@
+CREATE TABLE character(name STRING, data STRING)
