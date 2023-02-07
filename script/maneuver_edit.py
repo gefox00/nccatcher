@@ -1,18 +1,18 @@
-import sqlite3
 import PySimpleGUI as Sg
+import pprint
+import db
 
-dbname = 'data_file/my_char.db'
-conn = sqlite3.connect(dbname)
-cur = conn.cursor()
 
-cur.execute('CREATE TABLE IF NOT EXISTS character(name STRING, data STRING)')
-cur.execute('CREATE TABLE IF NOT EXISTS maneuver(name STRING, equip STRING, '
-            'timing STRING, cost STRING, range STRING, text STRING)')
+db_use = db.NcDataBase()
+eq_text = ['任意', '頭', '腕', '胴', '足', 'ポジションスキル', 'クラススキル']
+tm_text = ['オート', 'アクション', 'ジャッジ', 'ダメージ', 'ラピッド']
 
-layout = [[Sg.Input(size=70)],
-          [Sg.Input(size=15), Sg.Input(size=15), Sg.Input(size=15), Sg.Input(size=15)],
-          [Sg.MLine(size=(68, 15))],
-          [Sg.Button(button_text='登録')]
+layout = [[Sg.Input(size=70, key='mn_name')],
+          [Sg.DropDown(eq_text, key='mn_equip'),
+           Sg.DropDown(tm_text, key='mn_timing')],
+          [Sg.Input(size=15, key='mn_cost'), Sg.Input(size=15, key='mn_range')],
+          [Sg.MLine(size=(68, 15), key='mn_text')],
+          [Sg.Button(button_text='登録', key='-REGIST-')]
           ]
 window = Sg.Window(title='', layout=layout)
 
@@ -22,7 +22,9 @@ while end_flag:
     match event:
         case Sg.WIN_CLOSED:
             end_flag = False
-        case '':
+            del db_use
+        case '-REGIST-':
+            pprint.pprint(dir(window))
             pass
         case _:
             break
