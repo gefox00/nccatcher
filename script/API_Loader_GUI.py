@@ -2,15 +2,14 @@ import PySimpleGUI as Sg
 import API_Loader_method
 
 
-key_data = {'タイトル': 'title', 'タグ': 'tag', '名前': 'name'}
+key_data = {'タイトル': 'title', '名前': 'name'}
 
 base_url = 'https://charasheet.vampire-blood.net/list_nechro.html'
 API = API_Loader_method.ApiGetter(base_url=base_url, search_target={})
 #          1行目
 layout = [[Sg.Text('検索ワードを入力し検索データカテゴリを選択して実行ボタンを押してください')],
           # 2行目
-          [Sg.Input(size=60, key='target'),
-           Sg.Combo(list(key_data.keys()), size=8, default_value='名前', key='key')],
+          [Sg.Input(size=72, key='target')],
           # 3行目
           [Sg.Button(button_text='検索', size=62, key='bt_start')],
           # 4行目
@@ -41,8 +40,8 @@ while end_window:
             break
 
         case 'bt_start':
-            API.target = window['target'].get()
-            API.keys = key_data[window['key'].get()]
+            API.target = values['target']
+            API.keys = key_data[values['key']]
             getlist = API.get_target_list()
             window['select'].Update(values=getlist)
         case 'select':
