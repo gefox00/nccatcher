@@ -41,7 +41,6 @@ while end_window:
 
         case 'bt_start':
             API.target = values['target']
-            API.keys = key_data[values['key']]
             getlist = API.get_target_list()
             window['select'].Update(values=getlist)
         case 'select':

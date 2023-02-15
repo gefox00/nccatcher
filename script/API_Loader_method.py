@@ -16,7 +16,7 @@ class ApiGetter:
     def get_target_list(self):
         rtn = []
         print(self.target)
-        res = rq.get(url=self.url, data={'name': str(self.target)}).content
+        res = rq.get(url=self.url, params={'name': str(self.target)}).content
         # res = rq.get(url=f'{self.url}?{self.keys}={self.target}').content
         soup = Bs(res, "html.parser")
         for i in soup.find_all('a'):
@@ -32,7 +32,6 @@ class ApiGetter:
             if int(last_page) > 1:
                 for count in range(int(last_page-1)):
                     pass
-
 
         except AttributeError:
             pass
