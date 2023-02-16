@@ -3,7 +3,7 @@ import requests
 
 class ykch_converter:
     target = ''
-
+    a=''
     def __init__(self, url):
         self.target = url
 
