@@ -43,7 +43,6 @@ class ykch_converter:
 
 
         for cat, flv, name, cost in zip(res['Powers_lv'], res['Powers_kouka'], res['Powers_name'], res['Powers_koukatime']):
-            print(cost)
             command += cat + ' ' + name + '：{' + name + '}\n'
             param.append({'label': name, 'value': f'コスト{cost}：{flv}'})
             memo += f'{cat}：{name}：{cost}\n{flv}\n\n'
@@ -56,7 +55,7 @@ class ykch_converter:
                     status_data.append({'label': f'{i}へのつながり', 'value': 2, 'max': 5})
 
         temp = {'name': res['pc_name'], 'initiative': 0,
-                'externalUrl': str(target_url), 'memo': memo, 'commands': command,
+                'externalUrl': str(self.target), 'memo': memo, 'commands': command,
                 'status': status_data, 'params': param}
         out_data['data'] = temp
         str_out = str(out_data).replace('\'', '"')
