@@ -1,7 +1,9 @@
 import requests
 
+
 class ykch_converter:
     target = ''
+
     def __init__(self, url):
         self.target = url
 
@@ -40,7 +42,6 @@ class ykch_converter:
 
         for ch, emo in zip(res['tunagari_dst'], res['tunagarid_name'][1:]):
             param.append({'label': f'{ch}への感情', 'value': emo})
-
 
         for cat, flv, name, cost in zip(res['Powers_lv'], res['Powers_kouka'], res['Powers_name'], res['Powers_koukatime']):
             command += cat + ' ' + name + '：{' + name + '}\n'
