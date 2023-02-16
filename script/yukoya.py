@@ -14,7 +14,7 @@ class ykch_converter:
         res = requests.get(target_url).json()
         # データ組み立て用変数のセット
         memo = ''
-        command = ''
+        command = '＝＝＝＝＝ゆめ管理＝＝＝＝＝\n'
         param = []
         out_data = {"kind": "character"}
         status_data = []
@@ -42,12 +42,13 @@ class ykch_converter:
 
         for ch, emo in zip(res['tunagari_dst'], res['tunagarid_name'][1:]):
             param.append({'label': f'{ch}への感情', 'value': emo})
-
+        command += '\n＝＝＝＝＝能力＝＝＝＝＝\n'
         for cat, flv, name, cost in zip(res['Powers_lv'], res['Powers_kouka'],
                                         res['Powers_name'], res['Powers_koukatime']):
             command += cat + ' ' + name + '：{' + name + '}\n'
             param.append({'label': name, 'value': f'コスト{cost}：{flv}'})
             memo += f'{cat}：{name}：{cost}\n{flv}\n\n'
+            memo = memo[:-1]
 
         status_data.append({'label': '町へのつながり', 'value': 2, 'max': 5})
 
