@@ -43,7 +43,8 @@ class ykch_converter:
         for ch, emo in zip(res['tunagari_dst'], res['tunagarid_name'][1:]):
             param.append({'label': f'{ch}への感情', 'value': emo})
 
-        for cat, flv, name, cost in zip(res['Powers_lv'], res['Powers_kouka'], res['Powers_name'], res['Powers_koukatime']):
+        for cat, flv, name, cost in zip(res['Powers_lv'], res['Powers_kouka'],
+                                        res['Powers_name'], res['Powers_koukatime']):
             command += cat + ' ' + name + '：{' + name + '}\n'
             param.append({'label': name, 'value': f'コスト{cost}：{flv}'})
             memo += f'{cat}：{name}：{cost}\n{flv}\n\n'
