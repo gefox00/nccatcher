@@ -2039,18 +2039,6 @@
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\_distutils_hack\\override.py',
    'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
-   'PYMODULE'),
-  ('_py_abc',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
-   'PYMODULE'),
-  ('stringprep',
-   'C:\\Users\\kazuya '
-   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
-   'PYMODULE'),
   ('nturl2path',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\nturl2path.py',
@@ -2066,6 +2054,18 @@
   ('http.cookiejar',
    'C:\\Users\\kazuya '
    'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\http\\cookiejar.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\kazuya '
+   'asai\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
    'PYMODULE'),
   ('yukoya', 'D:\\Desktop\\nccatcher\\script\\yukoya.py', 'PYMODULE'),
   ('requests',
