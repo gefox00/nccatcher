@@ -44,6 +44,8 @@ class NcDataBase:
                          'cost STRING, range STRING, text STRING, category STRING)')
         self.cur.execute('CREATE TABLE IF NOT EXISTS '
                          'original_sheet(md STRING, id STRING, name STRING, json STRING)')
+        self.cur.execute('CREATE TABLE IF NOT EXISTS '
+                         'pc_class (name TEXT,we INTEGER, mu INTEGER, cy INTEGER)')
         self.conn.commit()
 
     def check_tbl_original_sheet_rows(self, data: []):

@@ -36,4 +36,3 @@ class ApiGetter:
         except AttributeError:
             pass
         return rtn
-        

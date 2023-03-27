@@ -21,9 +21,11 @@ class ykch_converter:
         # パレット生成とパラメータ生成
         status_data.append({'label': f'おもい', 'value': 0, 'max': 0})
         status_data.append({'label': f'ふしぎ', 'value': 0, 'max': 0})
+        status_data.append({'label': f'ゆめ', 'value': 0, 'max': 0})
         param.append({'label': 'へんげ', 'value': res['NC1']})
         param.append({'label': 'けもの', 'value': res['NC2']})
         param.append({'label': 'おとな', 'value': res['NC3']})
+        param.append({'label': 'こども', 'value': res['NC4']})
         param.append({'label': 'こども', 'value': res['NC4']})
 
         for i in res['tunagarid_dst']:

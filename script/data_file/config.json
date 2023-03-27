@@ -1,6 +1,5 @@
 {
-    "dbcheck": true,
-    "lastchar": true,
-    "debug": true,
-    "URL": "https://charasheet.vampire-blood.net/me58c7745269933f1080637f585dfa201"
+    "dbcheck": "This is NOT a valid Element!\nSTOP trying to do things with it or I will have to crash at some point!",
+    "lastchar": "This is NOT a valid Element!\nSTOP trying to do things with it or I will have to crash at some point!",
+    "URL": "This is NOT a valid Element!\nSTOP trying to do things with it or I will have to crash at some point!"
 }
