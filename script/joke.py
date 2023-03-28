@@ -2,7 +2,8 @@ import PySimpleGUI as Sg
 import pyperclip
 import json
 import cocofolia_clip_api
-
+a = "" \
+    ""
 
 # ファイルメニューの挙動制御
 def top_menu(menu_event: str, target_data=None):
