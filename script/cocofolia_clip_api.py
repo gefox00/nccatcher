@@ -52,6 +52,3 @@ class ClipApi:
 
     def txt_out(self):
         return json.dumps(self.data, indent=4)
-
-
-print(ClipApi().txt_out())

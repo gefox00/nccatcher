@@ -105,7 +105,8 @@ class Nccatcher:
                        {'label': '頭残', 'value': eq_h, 'max': eq_h},
                        {'label': '腕残', 'value': eq_a, 'max': eq_a},
                        {'label': '胴残', 'value': eq_b, 'max': eq_b},
-                       {'label': '脚残', 'value': eq_l, 'max': eq_l}]
+                       {'label': '脚残', 'value': eq_l, 'max': eq_l},
+                       {'label': 'たからもの', 'value': 3, 'max': 4}]
         # キャラシの未練を読み込んでステータスに変換
         for i in range(4):
             cocost_data.append({'label': f'PL{i+1}への未練', 'value': 3, 'max': 4})

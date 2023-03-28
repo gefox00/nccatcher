@@ -3,7 +3,7 @@ import requests
 
 class ykch_converter:
     target = ''
-    a=''
+
     def __init__(self, url):
         self.target = url
 
@@ -35,7 +35,6 @@ class ykch_converter:
             command += f':{i}へのゆめ=0\n'
             command += f':{i}へのつながり+1\n'
             param.append({'label': f'{i}への感情', 'value': '受容'})
-
         for i in res['tunagari_dst']:
             status_data.append({'label': f'{i}へのゆめ', 'value': 0, 'max': 0})
             command += f':{i}へのゆめ+1\n'
@@ -51,7 +50,6 @@ class ykch_converter:
             param.append({'label': name, 'value': f'コスト{cost}：{flv}'})
             memo += f'{cat}：{name}：{cost}\n{flv}\n\n'
             memo = memo[:-1]
-
         status_data.append({'label': '町へのつながり', 'value': 2, 'max': 5})
 
         for i in res['tunagari_dst']:
