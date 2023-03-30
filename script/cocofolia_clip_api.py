@@ -36,12 +36,12 @@ class ClipApi:
     # ステータス（次の形の配列を用意するキーは固定なのでほかのキーは使用しない
     #   {'label': 'ラベル名', 'value': '現在値', 'max': '最大値'})
     def set_append_status(self, status_dict: dict):
-        self.data['data']['status'] = status_dict
+        self.data['data']['status'].append(status_dict)
 
     # パラメータ（次の形の配列を用意するキーは固定なのでほかのキーは使用しない
     #   {'label': 'ラベル名', 'value': '値'})
     def set_append_params(self, params_dict: dict):
-        self.data['data']['params'] = params_dict
+        self.data['data']['params'].append(params_dict)
 
     # チャットパレット（改行込みの文字列でデータを用意する。１行ごとにコマンドとして認識されるので改行文字列でOK）
     def set_commands(self, commands_line: str):
@@ -72,9 +72,11 @@ class ClipApi:
         commands = 'choice[1,2,3,4]\n'
         if type_flag == 'pc':
             commands += 'NM\nNMN\nNME'
-        commands += [f'NA+{i+1}\n' for i in range(3)]
-        commands += [f'NA-{i+1}\n' for i in range(3)]
+        for i in ['NA+', 'NA-']:
+            for j in range(3):
+                commands += f'{i}{j}\n'
+        self.data['data']['commands'] += commands
 
     # チャットパレットに追記する
     def set_append_command(self, append_line: str):
-        self.data['data']['commands'] += append_line
+        self.data['data']['commands'] += '\n' + append_line
