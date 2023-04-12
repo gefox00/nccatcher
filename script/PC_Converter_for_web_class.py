@@ -38,7 +38,7 @@ class Nccatcher:
         timingdata = {0: 'Au', 1: 'Ac', 4: 'Ra', 2: 'Ju', 3: 'Da'}
 
         # チャットパレットの提携挿入コマンドを読込
-        with open('data_file/cmdtxt.txt', 'r', encoding='utf8')as r:
+        with open('data_file/cmdtxt.txt', 'r', encoding='utf8') as r:
             for i in r.read().splitlines():
                 command += i + '\n'
 
@@ -52,7 +52,7 @@ class Nccatcher:
             sys_memo += i + '\n'
 
         # マニューバデータベースの読込と出力データ作成
-        with open('data_file/data.json', 'r', encoding='utf8')as r:
+        with open('data_file/data.json', 'r', encoding='utf8') as r:
             much = json.load(r)
             # マニューバデータの作成
             # Jsonからマニューバを読み込んでチャパレ用に成形する
@@ -109,7 +109,7 @@ class Nccatcher:
                        {'label': 'たからもの', 'value': 3, 'max': 4}]
         # キャラシの未練を読み込んでステータスに変換
         for i in range(4):
-            cocost_data.append({'label': f'PL{i+1}への未練', 'value': 3, 'max': 4})
+            cocost_data.append({'label': f'PL{i + 1}への未練', 'value': 3, 'max': 4})
         # 装備マニューバやセッション内で変わることがほぼないデータをパラメータに設定
         cocopa_data = [{'label': 'ポジション', 'value': data['Position_Name']},
                        {'label': 'メインクラス', 'value': data['MCLS_Name']},

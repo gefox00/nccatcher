@@ -1,16 +1,18 @@
 from tkinter import filedialog
 from tkinter import messagebox
 import PySimpleGUI as sg
-import pyperclip,csv,os
+import pyperclip, csv, os
+
 
 class mnmuch:
     dbpath = 'data.csv'
     data = []
     outdict = {}
     outrow = ''
-    def __init__(self,name:str):
+
+    def __init__(self, name: str):
         try:
-            with open(self.dbpath,'r',encoding='utf8')as r:
+            with open(self.dbpath, 'r', encoding='utf8') as r:
                 for i in csv.reader(r):
                     self.data.append(i)
                     self.outdict[i[0]] = f'{i[5]} {i[6]}'
@@ -19,35 +21,37 @@ class mnmuch:
             self.outrow = 'nodata'
             self.namemuch(name)
 
-    def namemuch(self,name:str):
+    def namemuch(self, name: str):
 
         for i in self.data:
             if i[0] in name:
                 self.outrow = f'{i[5]} {i[6]}'
 
+
 class charsheet:
-    mpdat = []#読み込んだかけらを名前と内容に分けた配列が入る
-    mntxt = []#１行ずつ読み込んだマニューバの文字列が入る
-    mndat = []#マニューバを各項目で分割したデータ配列が入る
-    pntxt = ""#名前が入る
-    potxt = ""#ポジションが入る
-    cmtxt = ""#メインクラスが入る
-    cstxt = ""#サブクラスが入る
-    antxt = ""#暗示が入る
-    intxt = ""#行動値が入る
-    lptxt = ""#寵愛点が入る
-    oltxt = ""#年齢が入る
-    bupnt = ""#武装レベル
-    hepnt = ""#変異レベル
-    kapnt = ""#改造レベル
-    memotxt = ""#シートのメモが入る
-    dxcom= ''
+    mpdat = []  # 読み込んだかけらを名前と内容に分けた配列が入る
+    mntxt = []  # １行ずつ読み込んだマニューバの文字列が入る
+    mndat = []  # マニューバを各項目で分割したデータ配列が入る
+    pntxt = ""  # 名前が入る
+    potxt = ""  # ポジションが入る
+    cmtxt = ""  # メインクラスが入る
+    cstxt = ""  # サブクラスが入る
+    antxt = ""  # 暗示が入る
+    intxt = ""  # 行動値が入る
+    lptxt = ""  # 寵愛点が入る
+    oltxt = ""  # 年齢が入る
+    bupnt = ""  # 武装レベル
+    hepnt = ""  # 変異レベル
+    kapnt = ""  # 改造レベル
+    memotxt = ""  # シートのメモが入る
+    dxcom = ''
     pts = {}
     chptxt = ""
     fp = ""
-    def __init__(self,path:str,dx:bool = False):
-        with open(path,'r',encoding='utf-8-sig')as r:
-            self.fp = r.read().replace('　',' ')
+
+    def __init__(self, path: str, dx: bool = False):
+        with open(path, 'r', encoding='utf-8-sig') as r:
+            self.fp = r.read().replace('　', ' ')
         self.mn()
         self.mp()
         self.pd()
@@ -78,20 +82,20 @@ class charsheet:
     def plv(self):
         for i in self.fp.splitlines()[18:]:
             if '=合計=' in i:
-                pnt = i.replace('   ',' ').split(' ')
+                pnt = i.replace('   ', ' ').split(' ')
                 self.bupnt = pnt[1]
                 self.hepnt = pnt[2]
                 self.kapnt = pnt[3]
                 break
 
     def mp(self):
-        data = str(self.fp).replace('   ','|').replace('  ','|').replace('|||','|').replace('||','|').splitlines()
+        data = str(self.fp).replace('   ', '|').replace('  ', '|').replace('|||', '|').replace('||', '|').splitlines()
         for i in data[18:]:
-            if len(i)==0:
+            if len(i) == 0:
                 break
             line = i.split('|')
             if len(line) == 1:
-                self.mpdat.append([line[0],'NO DATA'])
+                self.mpdat.append([line[0], 'NO DATA'])
             else:
                 self.mpdat.append(line)
 
@@ -105,8 +109,9 @@ class charsheet:
             if len(i) == 0:
                 mnbool = False
             if mnbool and not '[部位]' in i and not i[:2] == '[]':
-                lines.append(i.replace(' ',''))
+                lines.append(i.replace(' ', ''))
         self.mntxt = lines
+
     def pd(self):
 
         data = self.fp.splitlines()[:19]
@@ -114,18 +119,18 @@ class charsheet:
         self.oltxt = data[4].split('：')[1]
         self.intxt = data[12].split('：')[1]
         self.potxt = data[9].split('：')[1]
-        if' / ' in data[10]:
+        if ' / ' in data[10]:
             self.cmtxt = data[10].split('：')[1].replace(' / ', ':').split(':')[0]
             self.cstxt = data[10].split('：')[1].replace(' / ', ':').split(':')[1]
 
         self.antxt = data[16].split('：')[1]
         for i in self.fp.splitlines():
             if '寵愛点：' in i:
-                self.lptxt = i.split('：')[1].replace('点','')
+                self.lptxt = i.split('：')[1].replace('点', '')
 
     def memo(self):
         data = self.fp.splitlines()
-        for c,i in enumerate(data):
+        for c, i in enumerate(data):
             if 'メモ：' in i:
                 memo = data[c:]
                 temp = ''
@@ -135,15 +140,16 @@ class charsheet:
 
     def mns(self):
         temp = []
-        dict = {'[頭]':0,'[腕]':0,'[胴]':0,'[脚]':0,'[ポジション]':0,'[メインクラス]':0,'[サブクラス]':0}
+        dict = {'[頭]': 0, '[腕]': 0, '[胴]': 0, '[脚]': 0, '[ポジション]': 0, '[メインクラス]': 0, '[サブクラス]': 0}
         for i in self.mntxt:
-            temp.append(i.replace(']',']:').split(':'))
+            temp.append(i.replace(']', ']:').split(':'))
         self.mndat = temp
         for i in temp:
             if len(i[0]) > 0:
                 dict[i[0]] += 1
         self.pts = dict
-    def Clip_Out(self,rtn:bool = False):
+
+    def Clip_Out(self, rtn: bool = False):
         data = {}
         mpd = ''
         mnd = ''
@@ -174,14 +180,12 @@ class charsheet:
         data.setdefault('data', {'name': self.pntxt,
                                  'initiative': int(self.intxt),
                                  'memo': memodat,
-                                 'commands':self.chptxt,
+                                 'commands': self.chptxt,
                                  'status': status,
                                  'params': params})
         pyperclip.copy(str(data).replace('\'', '"'))
         if rtn:
             return str(data).replace('\'', '"')
-
-
 
 
 fle = ''
@@ -190,17 +194,17 @@ sg.theme('Default1')
 # ウィンドウに配置するコンポーネント設定
 ##################################################
 layout = [
-            [sg.Text('キャラシのテキストファイルまたはキャラシのURLを指定してください')],
-            [sg.Input(size=(80,1),key='tb_open'), sg.Button('参照',key='btn_openpath')],
-            [sg.Button('変換開始',key='bt_start')]
-            ,[sg.Output(size=(83,20),key='log')]
-         ]
+    [sg.Text('キャラシのテキストファイルまたはキャラシのURLを指定してください')],
+    [sg.Input(size=(80, 1), key='tb_open'), sg.Button('参照', key='btn_openpath')],
+    [sg.Button('変換開始', key='bt_start')]
+    , [sg.Output(size=(83, 20), key='log')]
+]
 window = sg.Window('キャラシコンバーター', layout)
 while True:
     event, values = window.read()
     loaddata = {}
     ##################################################
-    #×ボタンクリック時の動作
+    # ×ボタンクリック時の動作
     ##################################################
     if event == sg.WIN_CLOSED or event == 'キャンセル':
         break
@@ -226,4 +230,5 @@ while True:
                 target += '.txt'
             d = charsheet(target, dx=True)
             window['log'].update(d.Clip_Out(rtn=True))
-            messagebox.showinfo('変換完了', f'{d.pntxt}のココフォリア用駒データをクリップボードに書き込みました\nココフォリアの盤面を右クリックして貼り付けを選択してください')
+            messagebox.showinfo('変換完了',
+                                f'{d.pntxt}のココフォリア用駒データをクリップボードに書き込みました\nココフォリアの盤面を右クリックして貼り付けを選択してください')

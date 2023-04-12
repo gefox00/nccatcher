@@ -1,7 +1,6 @@
 import PySimpleGUI as Sg
 import API_Loader_method
 
-
 key_data = {'タイトル': 'title', '名前': 'name'}
 
 base_url = 'https://charasheet.vampire-blood.net/list_nechro.html'

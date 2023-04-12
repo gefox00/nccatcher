@@ -2,8 +2,9 @@ import requests
 from requests import get
 from bs4 import BeautifulSoup as Bs
 from time import sleep
-import  os
+import os
 import json_file
+
 
 class DataSearch:
     out_data = {}
@@ -36,7 +37,7 @@ for g in get_data:
         data = DataSearch('name', g).get_ch_list()
         for i in data:
             print(i)
-            with open('endata/'+os.path.basename(i)+'on', 'w', encoding='utf8')as w:
+            with open('endata/' + os.path.basename(i) + 'on', 'w', encoding='utf8') as w:
                 res = requests.get(i).json()
                 json_file.dump(res, w, indent=4)
             sleep(1)

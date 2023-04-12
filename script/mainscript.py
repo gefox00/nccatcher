@@ -6,7 +6,7 @@ class nccatcher:
     # 変換結果を外部から取得するために設置
     ch_data = ""
 
-    def __init__(self,data: {}, URL: str):
+    def __init__(self, data: {}, URL: str):
         self.conv(data, URL)
 
     # 処理本体
@@ -36,7 +36,7 @@ class nccatcher:
         for i in data['kakera_name']:
             memo += i + '\n'
 
-        with open('data.json_file','r',encoding='utf8')as r:
+        with open('data.json_file', 'r', encoding='utf8') as r:
             much = json_file.load(r)
             for name, hantei, timing, cost, d_range in zip(data['Power_name'], data['Power_hantei'],
                                                            data['Power_timing'], data['Power_cost'],
@@ -54,10 +54,12 @@ class nccatcher:
                     for z in much:
                         if z in name:
                             insert = much[z]
-                    parts_data.append(f'[{partdata[int(hantei)]}] {name}: {timingdata[int(timing)]} : {cost} : {d_range} : {insert}')
+                    parts_data.append(
+                        f'[{partdata[int(hantei)]}] {name}: {timingdata[int(timing)]} : {cost} : {d_range} : {insert}')
                 except:
-                    parts_data.append(f'[{partdata[int(hantei)]}] {name}: {timingdata[int(timing)]} : {cost} : {d_range} : nodata')
-                parts_sysdata.append([name,hantei,timing,cost,d_range])
+                    parts_data.append(
+                        f'[{partdata[int(hantei)]}] {name}: {timingdata[int(timing)]} : {cost} : {d_range} : nodata')
+                parts_sysdata.append([name, hantei, timing, cost, d_range])
         temp = []
         for i in partdata:
             for j in parts_sysdata:
@@ -76,7 +78,7 @@ class nccatcher:
                        {'label': '胴残', 'value': eq_b, 'max': eq_b},
                        {'label': '脚残', 'value': eq_l, 'max': eq_l}]
         for i in range(4):
-            cocost_data.append({'label': f'PL{i+1}への未練', 'value': 3, 'max': 4})
+            cocost_data.append({'label': f'PL{i + 1}への未練', 'value': 3, 'max': 4})
         cocopa_data = [{'label': 'ポジション', 'value': data['Position_Name']},
                        {'label': 'メインクラス', 'value': data['MCLS_Name']},
                        {'label': 'サブクラス', 'value': data['SCLS_Name']},
@@ -93,9 +95,9 @@ class nccatcher:
         for i in parts_data:
             command += i + '\n'
         temp = {'name': data['pc_name'], 'initiative': int(data['Act_Total']),
-                                     'externalUrl': str(ch_URL),
-                                     'memo': memo, 'commands': command,
-                                     'status': cocost_data, 'params': cocopa_data}
+                'externalUrl': str(ch_URL),
+                'memo': memo, 'commands': command,
+                'status': cocost_data, 'params': cocopa_data}
         out_data['data'] = temp
         # クリップボード変換したデータを書き込みインスタンスしたときにオンオフ切替
         self.ch_data = str(out_data).replace('\'', '"')

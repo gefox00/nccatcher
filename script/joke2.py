@@ -2,6 +2,7 @@ import PySimpleGUI as Sg
 import pyperclip
 import json
 import cocofolia_clip_api
+
 clip_data = cocofolia_clip_api.ClipApi()
 M_timing = ['Au', 'Ac', 'Ra', 'Ju', 'Da']
 M_range = [str(i) for i in range(5)]
@@ -24,7 +25,7 @@ layout = [[Sg.Menu(menu_items, key='file_menu')],
           [Sg.Text('登録マニューバ数:0', key='MN_reg')],
           [Sg.Table(headings=['名称', 'タイミング', 'コスト', '射程', '効果'],
                     auto_size_columns=False, values=[],
-                    size=(48, 10),  justification='center',
+                    size=(48, 10), justification='center',
                     key='MN_table', max_col_width=20,
                     background_color='white', text_color='black',
                     alternating_row_color='skyblue')
@@ -75,7 +76,6 @@ while end_bol:
             pyperclip.copy(clip_data.txt_out())
             print(len(window['MN_table'].get()))
 
-
         case 'ファイルから開く':
             make_data = 0
             target = ['main_name', 'main_EXP', 'main_AP', 'main_unit',
@@ -87,7 +87,7 @@ while end_bol:
                     continue
             open_file = Sg.popup_get_file('このツールで作成したレギオンのJsonを指定してください',
                                           file_types=(("Json", "*.json"),))
-            with open(open_file, 'r', encoding='utf8')as r:
+            with open(open_file, 'r', encoding='utf8') as r:
                 data = json.load(r)
 
         case 'ファイルに保存':
@@ -99,7 +99,6 @@ while end_bol:
 
             for i in target:
                 window[i].get()
-
 
         case _:
             end_bol = False

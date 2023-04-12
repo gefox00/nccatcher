@@ -2,7 +2,6 @@ import PySimpleGUI as Sg
 import pprint
 import db
 
-
 db_use = db.NcDataBase()
 eq_text = ['任意', '頭', '腕', '胴', '足', 'ポジションスキル', 'クラススキル']
 tm_text = ['オート', 'アクション', 'ジャッジ', 'ダメージ', 'ラピッド']
@@ -28,4 +27,3 @@ while end_flag:
             pass
         case _:
             break
-

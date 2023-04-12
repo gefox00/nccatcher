@@ -7,7 +7,6 @@ import os
 import json
 import db
 
-
 # コンフィグ？
 config = {}
 db_use = db.NcDataBase()
@@ -16,7 +15,7 @@ log_header = {'name': '名前', 'initiative': '最大行動値', 'externalUrl': 
               'commands': 'チャットパレット', 'status': 'ステータス', 'params': 'パラメータ'}
 clip_data = ''
 if os.path.isfile('data_file/config.json'):
-    with open('data_file/config.json', 'r', encoding='utf8')as r:
+    with open('data_file/config.json', 'r', encoding='utf8') as r:
         config = json.load(r)
         # デバッグ用フラグ
         # このフラグは手動で切替て使うことにする
@@ -57,7 +56,7 @@ while end_flag:
             end_flag = False
             break
         # ループを抜けるとGUIが終了する
-    # 変換開始ボタン押下時の動作
+        # 変換開始ボタン押下時の動作
         case 'bt_start':
             # ブランクとキャラシ保管所以外のURLは無視する
             if len(window['tb_open'].get()) > 0 and 'charasheet.vampire-blood.net' in window['tb_open'].get():
@@ -131,7 +130,7 @@ while end_flag:
                 # 一応API自体は平均1秒6リクエストくらい処理できるっぽい（実測）
                 sleep(1)
 
-    # クリップボードにコピーボタン押下処理
+        # クリップボードにコピーボタン押下処理
         case 'bt_copy':
             if not debug_log:
                 continue
@@ -148,7 +147,7 @@ while end_flag:
                 # 他に処理はしない
                 Sg.popup_error('コピーすべきデータがありません', title='error', no_titlebar=True)
 # GUIの情報をJsonに保存
-with open('data_file/config.json', 'w', encoding='utf8')as w:
+with open('data_file/config.json', 'w', encoding='utf8') as w:
     config['dbcheck'] = window['chb_dbc'].get()
     config['lastchar'] = window['chb_last'].get()
     if window['chb_last'].get():
